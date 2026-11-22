@@ -1,0 +1,9 @@
+{
+  "name": "booking-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.cjs",
+  "scripts": {
+    "start": "node app.cjs"
+  }
+}
