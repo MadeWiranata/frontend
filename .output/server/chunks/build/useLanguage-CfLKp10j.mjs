@@ -5,7 +5,7 @@ var currentLocale = ref("id");
 var translations = {
 	id: {
 		nav: {
-			brand: "WisataBahari",
+			brand: "Trip Nusa Penida Explore",
 			subtitle: "Tour & Snorkeling",
 			home: "Beranda",
 			tours: "Paket Wisata",
@@ -268,7 +268,7 @@ var translations = {
 	},
 	en: {
 		nav: {
-			brand: "WisataBahari",
+			brand: "Trip Nusa Penida Explore",
 			subtitle: "Tour & Snorkeling",
 			home: "Home",
 			tours: "Tour Packages",
@@ -553,4 +553,4 @@ function useLanguage() {
 }
 
 export { useLanguage as u };
-//# sourceMappingURL=useLanguage-Dn1-YgKH.mjs.map
+//# sourceMappingURL=useLanguage-CfLKp10j.mjs.map

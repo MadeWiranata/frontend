@@ -962,12 +962,12 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "order-success",
 		path: "/order-success",
-		component: () => import('../build/order-success-cOHFLkHw.mjs')
+		component: () => import('../build/order-success-CnmmM1YE.mjs')
 	},
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-CDjxUfYb.mjs')
+		component: () => import('../build/pages-z6K4IhUv.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -2349,29 +2349,29 @@ function useWisataApi() {
 	};
 	const getCompanyProfile = async () => {
 		const defaultProfile = {
-			companyName: "PT Wisata Bahari Indonesia",
-			brandName: "Booking Wisata Bahari",
-			legalName: "PT Wisata Bahari Indonesia Tbk",
-			tagline: "Eksplorasi Keindahan Laut & Pulau Eksotis Nusantara",
-			description: "Penyedia layanan reservasi paket wisata bahari, snorkeling Nusa Penida Manta Bay, fast boat tiket Sanur, diving Raja Ampat, dan private trip terpercaya di Indonesia.",
+			companyName: "Trip Nusa Penida Explore",
+			brandName: "Trip Nusa Penida Explore",
+			legalName: "",
+			tagline: "Explore Nusa Penida & Marine Tour",
+			description: "",
 			logoUrl: "",
 			logoDarkUrl: "",
 			faviconUrl: "",
-			email: "info@wisatabahari.com",
-			phone: "+62 812-3456-7890",
-			whatsapp: "+62 812-3456-7890",
-			address: "Jl. Hang Tuah No. 45, Sanur Kaja, Denpasar Selatan",
-			city: "Denpasar",
-			province: "Bali",
-			postalCode: "80228",
-			bankName: "Bank Central Asia (BCA)",
-			bankAccountNumber: "8830192831",
-			bankAccountName: "PT WISATA BAHARI INDONESIA",
-			facebookUrl: "https://facebook.com/wisatabahari",
-			instagramUrl: "https://instagram.com/wisatabahari",
-			youtubeUrl: "https://youtube.com/@wisatabahari",
-			tiktokUrl: "https://tiktok.com/@wisatabahari",
-			footerText: "© 2026 PT Wisata Bahari Indonesia. Seluruh hak cipta dilindungi undang-undang."
+			email: "",
+			phone: "",
+			whatsapp: "",
+			address: "",
+			city: "",
+			province: "",
+			postalCode: "",
+			bankName: "",
+			bankAccountNumber: "",
+			bankAccountName: "",
+			facebookUrl: "",
+			instagramUrl: "",
+			youtubeUrl: "",
+			tiktokUrl: "",
+			footerText: ""
 		};
 		try {
 			const res = await apiClient.get("/company/profile");
@@ -2385,10 +2385,10 @@ function useWisataApi() {
 	};
 	const updateCompanyProfile = async (dto) => {
 		try {
-			const res = await apiClient.put("/company/profile", dto);
+			const res = await apiClient.put("/company/profile", dto, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
 			return res.data?.data !== void 0 ? res.data.data : res.data;
 		} catch (err) {
-			return dto;
+			throw new Error(parseErrorMessage(err) || "Gagal menyimpan profil perusahaan ke server.");
 		}
 	};
 	const adminToken = ref(null);
@@ -2719,7 +2719,7 @@ function useWisataApi() {
 		if (!url) return "";
 		if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("data:")) return url;
 		const cleanPath = url.startsWith("/") ? url : `/${url}`;
-		return `${apiBase.replace(/\/api\/v1\/?$/, "").replace(/\/api\/?$/, "")}${cleanPath}`;
+		return `${apiBase.replace(/\/+$/, "")}${cleanPath}`;
 	};
 	const getMasterBookingStatuses = async (all = true) => {
 		try {
@@ -3145,7 +3145,7 @@ var app_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 			return "image/x-icon";
 		});
 		const pageTitle = computed(() => {
-			return `${company.value?.brandName || company.value?.companyName || "Wisata Bahari"} - ${company.value?.tagline || "Platform Booking Wisata Bahari & Fast Boat"}`;
+			return `${company.value?.brandName || company.value?.companyName || "Trip Nusa Penida Explore"} - ${company.value?.tagline || "Platform Booking Wisata & Fast Boat"}`;
 		});
 		useHead(() => ({
 			title: pageTitle.value,

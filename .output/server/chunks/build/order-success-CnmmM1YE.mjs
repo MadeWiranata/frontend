@@ -1,7 +1,7 @@
 import { N as NuxtLink } from './nuxt-link-BZR9fs_n.mjs';
 import { b as useRoute$1, u as useWisataApi } from '../virtual/entry.mjs';
 import { _ as _virtual_public__2Fdana_logo_default } from './_virtual_public-DGG8jvQn.mjs';
-import { u as useLanguage } from './useLanguage-Dn1-YgKH.mjs';
+import { u as useLanguage } from './useLanguage-CfLKp10j.mjs';
 import { _ as _plugin_vue_export_helper_default } from './_plugin-vue_export-helper-DjkACiAr.mjs';
 import { defineComponent, ref, computed, mergeProps, withCtx, unref, createVNode, toDisplayString, createTextVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderAttr } from 'vue/server-renderer';
@@ -155,4 +155,4 @@ order_success_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) =
 var order_success_default = /*#__PURE__*/ _plugin_vue_export_helper_default(order_success_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-d0052b7a"]]);
 
 export { order_success_default as default };
-//# sourceMappingURL=order-success-cOHFLkHw.mjs.map
+//# sourceMappingURL=order-success-CnmmM1YE.mjs.map
