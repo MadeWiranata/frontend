@@ -957,7 +957,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-AGPisg6M.mjs')
+		component: () => import('../build/admin-CqHqZtFY.mjs')
 	},
 	{
 		name: "order-success",
@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-FrYuQnGX.mjs')
+		component: () => import('../build/pages-CUf3T2_3.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
