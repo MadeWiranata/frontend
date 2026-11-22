@@ -957,7 +957,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-CqHqZtFY.mjs')
+		component: () => import('../build/admin-Cvt2Krel.mjs')
 	},
 	{
 		name: "order-success",
@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-CUf3T2_3.mjs')
+		component: () => import('../build/pages-Aiae0Zu3.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -2658,6 +2658,41 @@ function useWisataApi() {
 			throw new Error(parseErrorMessage(err));
 		}
 	};
+	const getMasterSpots = async (region, all = true) => {
+		try {
+			const res = await apiClient.get("/destinations/spots", { params: {
+				...region ? { region } : {},
+				all: all ? "true" : "false"
+			} });
+			const data = res.data?.data !== void 0 ? res.data.data : res.data;
+			if (Array.isArray(data)) return data;
+		} catch (_) {}
+		return [];
+	};
+	const createMasterSpotAdmin = async (spot) => {
+		try {
+			const res = await apiClient.post("/destinations/spots", spot, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
+			return res.data?.data !== void 0 ? res.data.data : res.data;
+		} catch (err) {
+			throw new Error(parseErrorMessage(err));
+		}
+	};
+	const updateMasterSpotAdmin = async (id, spot) => {
+		try {
+			const res = await apiClient.put(`/destinations/spots/${id}`, spot, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
+			return res.data?.data !== void 0 ? res.data.data : res.data;
+		} catch (err) {
+			throw new Error(parseErrorMessage(err));
+		}
+	};
+	const deleteMasterSpotAdmin = async (id) => {
+		try {
+			const res = await apiClient.delete(`/destinations/spots/${id}`, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
+			return res.data?.data !== void 0 ? res.data.data : res.data;
+		} catch (err) {
+			throw new Error(parseErrorMessage(err));
+		}
+	};
 	const getAllDurationsAdmin = async () => {
 		try {
 			const res = await apiClient.get("/durations", { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
@@ -2955,6 +2990,48 @@ function useWisataApi() {
 			throw new Error(parseErrorMessage(err));
 		}
 	};
+	const getMasterTaxes = async (onlyActive = false) => {
+		try {
+			const res = await apiClient.get(`/masters/taxes?active=${onlyActive}`);
+			const data = res.data?.data !== void 0 ? res.data.data : res.data;
+			return Array.isArray(data) ? data : [];
+		} catch (_) {
+			return [];
+		}
+	};
+	const getActiveMasterTax = async () => {
+		try {
+			const res = await apiClient.get("/masters/taxes/active");
+			const data = res.data?.data !== void 0 ? res.data.data : res.data;
+			return data && data.isActive ? data : null;
+		} catch (_) {
+			return null;
+		}
+	};
+	const createMasterTaxAdmin = async (body) => {
+		try {
+			const res = await apiClient.post("/masters/taxes", body, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
+			return res.data?.data !== void 0 ? res.data.data : res.data;
+		} catch (err) {
+			throw new Error(parseErrorMessage(err));
+		}
+	};
+	const updateMasterTaxAdmin = async (id, body) => {
+		try {
+			const res = await apiClient.put(`/masters/taxes/${encodeURIComponent(id)}`, body, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
+			return res.data?.data !== void 0 ? res.data.data : res.data;
+		} catch (err) {
+			throw new Error(parseErrorMessage(err));
+		}
+	};
+	const deleteMasterTaxAdmin = async (id) => {
+		try {
+			const res = await apiClient.delete(`/masters/taxes/${encodeURIComponent(id)}`, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
+			return res.data?.data !== void 0 ? res.data.data : res.data;
+		} catch (err) {
+			throw new Error(parseErrorMessage(err));
+		}
+	};
 	const getUsersAdmin = async (params) => {
 		try {
 			const res = await apiClient.get("/users", {
@@ -3113,6 +3190,10 @@ function useWisataApi() {
 		createDestinationAdmin,
 		updateDestinationAdmin,
 		deleteDestinationAdmin,
+		getMasterSpots,
+		createMasterSpotAdmin,
+		updateMasterSpotAdmin,
+		deleteMasterSpotAdmin,
 		getAllDurationsAdmin,
 		createDurationAdmin,
 		updateDurationAdmin,
@@ -3137,6 +3218,11 @@ function useWisataApi() {
 		createMasterDiscountType,
 		updateMasterDiscountType,
 		deleteMasterDiscountType,
+		getMasterTaxes,
+		getActiveMasterTax,
+		createMasterTaxAdmin,
+		updateMasterTaxAdmin,
+		deleteMasterTaxAdmin,
 		getUsersAdmin,
 		getRolesAdmin,
 		createUserAdmin,
