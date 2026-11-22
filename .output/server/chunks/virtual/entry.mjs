@@ -957,12 +957,12 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-N9V7P5Jw.mjs')
+		component: () => import('../build/admin-AGPisg6M.mjs')
 	},
 	{
 		name: "order-success",
 		path: "/order-success",
-		component: () => import('../build/order-success-CnmmM1YE.mjs')
+		component: () => import('../build/order-success-Ddd2_cBH.mjs')
 	},
 	{
 		name: "index",

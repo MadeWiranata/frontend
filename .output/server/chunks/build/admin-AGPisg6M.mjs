@@ -2,8 +2,8 @@ import { N as NuxtLink } from './nuxt-link-BZR9fs_n.mjs';
 import { u as useWisataApi, a as useRuntimeConfig } from '../virtual/entry.mjs';
 import { _ as _virtual_public__2Fdana_logo_default } from './_virtual_public-DGG8jvQn.mjs';
 import { u as useTheme, s as ssrRenderList$2, S as SearchableSelect_default } from './useTheme-jR-NkPQp.mjs';
-import { defineComponent, ref, computed, watch, mergeProps, withCtx, createVNode, toDisplayString, unref, useSSRContext } from 'vue';
-import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrIncludeBooleanAttr, ssrLooseContain, ssrLooseEqual, ssrRenderClass, ssrRenderStyle, ssrRenderDynamicModel } from 'vue/server-renderer';
+import { defineComponent, ref, computed, watch, mergeProps, withCtx, unref, openBlock, createBlock, createVNode, toDisplayString, useSSRContext } from 'vue';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrInterpolate, ssrIncludeBooleanAttr, ssrLooseContain, ssrLooseEqual, ssrRenderClass, ssrRenderStyle, ssrRenderDynamicModel } from 'vue/server-renderer';
 import '../_/nitro.mjs';
 import 'unhead/server';
 import 'unhead/legacy';
@@ -716,11 +716,22 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 			_push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200" }, _attrs))}><header class="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-40"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"><div class="flex items-center gap-3">`);
 			_push(ssrRenderComponent(_component_NuxtLink, {
 				to: "/",
-				class: "flex items-center gap-2 group"
+				class: "flex items-center gap-2.5 group"
 			}, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) _push(`<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform"${_scopeId}> 🌊 </div><div${_scopeId}><span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight"${_scopeId}>${ssrInterpolate(company.value.brandName || "Wisata Bahari")}</span><span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold"${_scopeId}>${ssrInterpolate(company.value.companyName || "PT Wisata Bahari Indonesia")}</span></div>`);
-					else return [createVNode("div", { class: "w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform" }, " 🌊 "), createVNode("div", null, [createVNode("span", { class: "font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight" }, toDisplayString(company.value.brandName || "Wisata Bahari"), 1), createVNode("span", { class: "text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold" }, toDisplayString(company.value.companyName || "PT Wisata Bahari Indonesia"), 1)])];
+					if (_push) {
+						if (company.value.logoUrl) _push(`<img${ssrRenderAttr("src", unref(getImageUrl)(company.value.logoUrl))}${ssrRenderAttr("alt", company.value.brandName || "Logo")} class="h-10 max-w-[140px] object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform"${_scopeId}>`);
+						else _push(`<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform"${_scopeId}> 🌊 </div>`);
+						_push(`<div${_scopeId}><span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight"${_scopeId}>${ssrInterpolate(company.value.brandName || "Admin Panel")}</span><span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold"${_scopeId}>${ssrInterpolate(company.value.companyName || "Master Data Management")}</span></div>`);
+					} else return [company.value.logoUrl ? (openBlock(), createBlock("img", {
+						key: 0,
+						src: unref(getImageUrl)(company.value.logoUrl),
+						alt: company.value.brandName || "Logo",
+						class: "h-10 max-w-[140px] object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform"
+					}, null, 8, ["src", "alt"])) : (openBlock(), createBlock("div", {
+						key: 1,
+						class: "w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform"
+					}, " 🌊 ")), createVNode("div", null, [createVNode("span", { class: "font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight" }, toDisplayString(company.value.brandName || "Admin Panel"), 1), createVNode("span", { class: "text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold" }, toDisplayString(company.value.companyName || "Master Data Management"), 1)])];
 				}),
 				_: 1
 			}, _parent));
@@ -1299,4 +1310,4 @@ index_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var admin_default = index_vue_vue_type_script_setup_true_lang_default;
 
 export { admin_default as default };
-//# sourceMappingURL=admin-N9V7P5Jw.mjs.map
+//# sourceMappingURL=admin-AGPisg6M.mjs.map
