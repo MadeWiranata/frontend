@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-z6K4IhUv.mjs')
+		component: () => import('../build/pages-FrYuQnGX.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js

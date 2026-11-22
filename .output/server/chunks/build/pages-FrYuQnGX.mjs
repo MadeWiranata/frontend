@@ -847,9 +847,9 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 		const { locale } = useLanguage();
 		const { getCompanyProfile} = useWisataApi();
 		const companyInfo = ref({
-			companyName: "PT Wisata Bahari Indonesia",
-			brandName: "Booking Wisata Bahari",
-			phone: "+62 812-3456-7890",
+			companyName: "Trip Nusa Penida Explore",
+			brandName: "Trip Nusa Penida Explore",
+			phone: "",
 			whatsapp: "+62 812-3456-7890",
 			email: "info@wisatabahari.com",
 			logoUrl: "",
@@ -988,4 +988,4 @@ index_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var pages_default = index_vue_vue_type_script_setup_true_lang_default;
 
 export { pages_default as default };
-//# sourceMappingURL=pages-z6K4IhUv.mjs.map
+//# sourceMappingURL=pages-FrYuQnGX.mjs.map
