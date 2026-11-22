@@ -2040,6 +2040,31 @@ function useWisataApi() {
 			"x-turnstile-token": "1x00000000000000000000AA"
 		}
 	});
+	let refreshPromise = null;
+	apiClient.interceptors.request.use((reqConfig) => {
+		const token = adminToken.value || null;
+		if (token && !reqConfig.headers?.Authorization) {
+			reqConfig.headers = reqConfig.headers || {};
+			reqConfig.headers.Authorization = `Bearer ${token}`;
+		}
+		return reqConfig;
+	});
+	apiClient.interceptors.response.use((response) => response, async (error) => {
+		const originalRequest = error?.config;
+		const status = error?.response?.status;
+		const reqUrl = String(originalRequest?.url || "");
+		const isAuthEndpoint = reqUrl.includes("/auth/login") || reqUrl.includes("/auth/refresh") || reqUrl.includes("/auth/forgot-password") || reqUrl.includes("/auth/reset-password");
+		if (status === 401 && originalRequest && !originalRequest._retry && !isAuthEndpoint) {
+			originalRequest._retry = true;
+			const newToken = await refreshAdminToken();
+			if (newToken) {
+				originalRequest.headers = originalRequest.headers || {};
+				originalRequest.headers.Authorization = `Bearer ${newToken}`;
+				return apiClient(originalRequest);
+			}
+		}
+		return Promise.reject(error);
+	});
 	const parseErrorMessage = (err) => {
 		if (err.response?.data?.message) {
 			const msg = err.response.data.message;
@@ -2442,12 +2467,18 @@ function useWisataApi() {
 		currentAdmin.value = null;
 	};
 	const refreshAdminToken = async () => {
-		try {
+		if (refreshPromise) return refreshPromise;
+		refreshPromise = (async () => {
+			try {
+				return null;
+			} catch (_) {
+				logoutAdmin();
+			} finally {
+				refreshPromise = null;
+			}
 			return null;
-		} catch (_) {
-			logoutAdmin();
-		}
-		return null;
+		})();
+		return refreshPromise;
 	};
 	const requestForgotPasswordOtp = async (email, turnstileToken) => {
 		const res = await apiClient.post("/auth/forgot-password", {
