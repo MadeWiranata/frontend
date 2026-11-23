@@ -4165,7 +4165,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "58268fae-2e5a-407e-9209-82681c92522f",
+    "buildId": "0e514279-0ac0-4c73-b693-2c341fc4a62d",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -4800,7 +4800,7 @@ const NUXT_PRERENDER_NO_SSR_ROUTES = ["/index.html","/200.html","/404.html"];
 const NUXT_NO_SCRIPTS_PATTERNS = [];
 const NUXT_PAGE_PATTERNS = ["/admin","/order-success","/"];
 const NUXT_SSR_STREAMING = false;
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"description","content":"Platform booking paket wisata, snorkeling Manta Bay, tour Nusa Penida & tiket fast boat Sanur terpercaya."},{"name":"viewport","content":"width=device-width, initial-scale=1.0"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Trip Nusa Penida Explore - Marine Tour & Travel Booking"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"description","content":"Platform booking paket wisata, snorkeling Manta Bay, tour Nusa Penida & tiket fast boat Sanur terpercaya."},{"name":"viewport","content":"width=device-width, initial-scale=1.0"},{"name":"google-site-verification","content":"6fd_SD8LDiRgmgF99BJJHuIZXTMvxczozn0IKyl3uM4"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Trip Nusa Penida Explore - Marine Tour & Travel Booking"};
 const appRootTag = "div";
 const appRootAttrs = {"id":"__nuxt"};
 const appTeleportTag = "div";
@@ -5096,27 +5096,6 @@ const assets = {
     "size": 1973,
     "path": "../public/dana-logo.svg"
   },
-  "/images/avatar-budi.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"33dd-DfRZcmufZIF9qhw/9PV5eOjvm2w\"",
-    "mtime": "2026-11-08T06:49:53.637Z",
-    "size": 13277,
-    "path": "../public/images/avatar-budi.jpg"
-  },
-  "/images/avatar-sarah.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"526e-Uzkta09SRmil+RsguHQpgiRkqLM\"",
-    "mtime": "2026-11-08T06:49:53.712Z",
-    "size": 21102,
-    "path": "../public/images/avatar-sarah.jpg"
-  },
-  "/robots.txt": {
-    "type": "text/plain; charset=utf-8",
-    "etag": "\"18-j8OIsL9qGDmNZ+lHhp2tyH4XtaE\"",
-    "mtime": "2026-11-04T03:39:42.000Z",
-    "size": 24,
-    "path": "../public/robots.txt"
-  },
   "/images/.gitkeep": {
     "type": "text/plain; charset=utf-8",
     "etag": "\"11-YRaOnmT19W2/jXdlLZXwGFDdWzk\"",
@@ -5124,26 +5103,26 @@ const assets = {
     "size": 17,
     "path": "../public/images/.gitkeep"
   },
-  "/images/category-snorkeling.jpg": {
+  "/images/avatar-budi.jpg": {
     "type": "image/jpeg",
-    "etag": "\"1bcaf-fW0e21N7dYLHJ7nhcPiJs8Y+u+4\"",
-    "mtime": "2026-11-08T06:49:52.638Z",
-    "size": 113839,
-    "path": "../public/images/category-snorkeling.jpg"
+    "etag": "\"33dd-DfRZcmufZIF9qhw/9PV5eOjvm2w\"",
+    "mtime": "2026-11-08T06:49:53.637Z",
+    "size": 13277,
+    "path": "../public/images/avatar-budi.jpg"
   },
-  "/images/category-fast-boat.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"205cc-mZqAjc+/wNzNwZpuTheO1C710W0\"",
-    "mtime": "2026-11-08T06:49:52.131Z",
-    "size": 132556,
-    "path": "../public/images/category-fast-boat.jpg"
+  "/robots.txt": {
+    "type": "text/plain; charset=utf-8",
+    "etag": "\"51-qedJ/45rIDptFNPOC8f0Mkl1okA\"",
+    "mtime": "2026-11-23T01:34:29.053Z",
+    "size": 81,
+    "path": "../public/robots.txt"
   },
-  "/images/category-island-tour.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"1ff2f-AU7SDsWgaAEFz2+L6BpngOH+t/w\"",
-    "mtime": "2026-11-08T06:49:52.390Z",
-    "size": 130863,
-    "path": "../public/images/category-island-tour.jpg"
+  "/sitemap.xml": {
+    "type": "application/xml",
+    "etag": "\"f3-KUPalX19Db8A1IFW3fjEFIsqRU0\"",
+    "mtime": "2026-11-23T01:34:17.645Z",
+    "size": 243,
+    "path": "../public/sitemap.xml"
   },
   "/images/avatar-michael.jpg": {
     "type": "image/jpeg",
@@ -5152,6 +5131,27 @@ const assets = {
     "size": 13898,
     "path": "../public/images/avatar-michael.jpg"
   },
+  "/images/avatar-sarah.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"526e-Uzkta09SRmil+RsguHQpgiRkqLM\"",
+    "mtime": "2026-11-08T06:49:53.712Z",
+    "size": 21102,
+    "path": "../public/images/avatar-sarah.jpg"
+  },
+  "/images/category-island-tour.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"1ff2f-AU7SDsWgaAEFz2+L6BpngOH+t/w\"",
+    "mtime": "2026-11-08T06:49:52.390Z",
+    "size": 130863,
+    "path": "../public/images/category-island-tour.jpg"
+  },
+  "/images/category-snorkeling.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"1bcaf-fW0e21N7dYLHJ7nhcPiJs8Y+u+4\"",
+    "mtime": "2026-11-08T06:49:52.638Z",
+    "size": 113839,
+    "path": "../public/images/category-snorkeling.jpg"
+  },
   "/images/hero-banner-bali.jpg": {
     "type": "image/jpeg",
     "etag": "\"34521-MG9K7HY0lNWQ0BUTGdisPdl+CrA\"",
@@ -5159,12 +5159,12 @@ const assets = {
     "size": 214305,
     "path": "../public/images/hero-banner-bali.jpg"
   },
-  "/images/pngtree-palm-tree-summe-touris-1794120153903-6571.jpg": {
+  "/images/category-fast-boat.jpg": {
     "type": "image/jpeg",
-    "etag": "\"2376-amEcB/Redo+MpNogLUvnkFU4qrc\"",
-    "mtime": "2026-11-08T06:42:33.913Z",
-    "size": 9078,
-    "path": "../public/images/pngtree-palm-tree-summe-touris-1794120153903-6571.jpg"
+    "etag": "\"205cc-mZqAjc+/wNzNwZpuTheO1C710W0\"",
+    "mtime": "2026-11-08T06:49:52.131Z",
+    "size": 132556,
+    "path": "../public/images/category-fast-boat.jpg"
   },
   "/images/pngtree-palm-tree-summe-touris-1794124070997-6287.jpg": {
     "type": "image/jpeg",
@@ -5173,12 +5173,12 @@ const assets = {
     "size": 9078,
     "path": "../public/images/pngtree-palm-tree-summe-touris-1794124070997-6287.jpg"
   },
-  "/images/pngtree-palm-tree-summe-touris-1794127960070-6541.jpg": {
+  "/images/pngtree-palm-tree-summe-touris-1794120153903-6571.jpg": {
     "type": "image/jpeg",
     "etag": "\"2376-amEcB/Redo+MpNogLUvnkFU4qrc\"",
-    "mtime": "2026-11-08T08:52:40.071Z",
+    "mtime": "2026-11-08T06:42:33.913Z",
     "size": 9078,
-    "path": "../public/images/pngtree-palm-tree-summe-touris-1794127960070-6541.jpg"
+    "path": "../public/images/pngtree-palm-tree-summe-touris-1794120153903-6571.jpg"
   },
   "/images/pngtree-palm-tree-summe-touris-1794124092022-9294.jpg": {
     "type": "image/jpeg",
@@ -5194,19 +5194,19 @@ const assets = {
     "size": 90035,
     "path": "../public/images/rfgvtrfgrgr-1794121168435-7148.png"
   },
+  "/images/pngtree-palm-tree-summe-touris-1794127960070-6541.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"2376-amEcB/Redo+MpNogLUvnkFU4qrc\"",
+    "mtime": "2026-11-08T08:52:40.071Z",
+    "size": 9078,
+    "path": "../public/images/pngtree-palm-tree-summe-touris-1794127960070-6541.jpg"
+  },
   "/images/test-upload-sample-1794109043668-7407.png": {
     "type": "image/png",
     "etag": "\"46-Sl63FxtY4IpogXIeO0PVpEQZor4\"",
     "mtime": "2026-11-08T03:37:23.669Z",
     "size": 70,
     "path": "../public/images/test-upload-sample-1794109043668-7407.png"
-  },
-  "/images/tour-manta-bay.jpg": {
-    "type": "image/jpeg",
-    "etag": "\"34521-MG9K7HY0lNWQ0BUTGdisPdl+CrA\"",
-    "mtime": "2026-11-08T06:49:52.927Z",
-    "size": 214305,
-    "path": "../public/images/tour-manta-bay.jpg"
   },
   "/images/tour-fast-boat.jpg": {
     "type": "image/jpeg",
@@ -5215,13 +5215,6 @@ const assets = {
     "size": 266254,
     "path": "../public/images/tour-fast-boat.jpg"
   },
-  "/_nuxt/BDNMzG2s.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"54-MasMfSk/A98C3Gn9uIOxtFxkWNw\"",
-    "mtime": "2026-11-23T01:22:32.715Z",
-    "size": 84,
-    "path": "../public/_nuxt/BDNMzG2s.js"
-  },
   "/images/tour-raja-ampat.jpg": {
     "type": "image/jpeg",
     "etag": "\"2a683-ZgKYeT+lwdRwDPctfmUMDwd8rcE\"",
@@ -5229,19 +5222,19 @@ const assets = {
     "size": 173699,
     "path": "../public/images/tour-raja-ampat.jpg"
   },
-  "/_nuxt/BR2Ce9gL.js": {
+  "/_nuxt/BbMgmaMR.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"a9a-ZCrI72Z//6RwFAJj0iWiDNIy8UY\"",
-    "mtime": "2026-11-23T01:22:32.715Z",
-    "size": 2714,
-    "path": "../public/_nuxt/BR2Ce9gL.js"
+    "etag": "\"1cf7e-0/BxZlDzep6xq74W8TCKV2tXZcE\"",
+    "mtime": "2026-11-23T01:34:43.832Z",
+    "size": 118654,
+    "path": "../public/_nuxt/BbMgmaMR.js"
   },
-  "/favicon.ico": {
-    "type": "image/vnd.microsoft.icon",
-    "etag": "\"1227c6-lZ0qxmt7BSrcmQhz8CyEE/oU28Y\"",
-    "mtime": "2026-11-08T07:17:30.452Z",
-    "size": 1189830,
-    "path": "../public/favicon.ico"
+  "/images/tour-manta-bay.jpg": {
+    "type": "image/jpeg",
+    "etag": "\"34521-MG9K7HY0lNWQ0BUTGdisPdl+CrA\"",
+    "mtime": "2026-11-08T06:49:52.927Z",
+    "size": 214305,
+    "path": "../public/images/tour-manta-bay.jpg"
   },
   "/images/chatgpt-image-sep-5-2026-03-07-1794122250434-7374.png": {
     "type": "image/png",
@@ -5257,6 +5250,13 @@ const assets = {
     "size": 1189830,
     "path": "../public/favicon.png"
   },
+  "/favicon.ico": {
+    "type": "image/vnd.microsoft.icon",
+    "etag": "\"1227c6-lZ0qxmt7BSrcmQhz8CyEE/oU28Y\"",
+    "mtime": "2026-11-08T07:17:30.452Z",
+    "size": 1189830,
+    "path": "../public/favicon.ico"
+  },
   "/images/image-2-1794272912987-5763.jpg": {
     "type": "image/jpeg",
     "etag": "\"1c64ed-eWcAA0zqR51RqebjPa15rfFouv0\"",
@@ -5264,124 +5264,131 @@ const assets = {
     "size": 1860845,
     "path": "../public/images/image-2-1794272912987-5763.jpg"
   },
-  "/_nuxt/CW7GdDqQ.js": {
+  "/_nuxt/Bc97HB4F.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"7a-/wBJjWObIUZLC/7pxR9cEw/sOYQ\"",
-    "mtime": "2026-11-23T01:22:32.715Z",
-    "size": 122,
-    "path": "../public/_nuxt/CW7GdDqQ.js"
-  },
-  "/_nuxt/CUfnP1ZH.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"5036-Hqj/4XCy95S7Lcfm4Is/9BEAqqc\"",
-    "mtime": "2026-11-23T01:22:32.715Z",
-    "size": 20534,
-    "path": "../public/_nuxt/CUfnP1ZH.js"
-  },
-  "/_nuxt/D3zlrGX8.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"7f90-ScCSKJjohERAnNWzUvcWqEy7Gbs\"",
-    "mtime": "2026-11-23T01:22:32.715Z",
-    "size": 32656,
-    "path": "../public/_nuxt/D3zlrGX8.js"
-  },
-  "/_nuxt/d8d-Br5G.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"1cf7e-rsBPKGVRDd63/vFU16tjpoe0/7s\"",
-    "mtime": "2026-11-23T01:22:32.723Z",
-    "size": 118654,
-    "path": "../public/_nuxt/d8d-Br5G.js"
-  },
-  "/_nuxt/DXzEog1g.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"18bf-iZ4rjS7syHa/Q3PtbvosSeqHeBg\"",
-    "mtime": "2026-11-23T01:22:32.721Z",
+    "etag": "\"18bf-v/QZxdB+ofj0QlVnIkjiLP1vsKg\"",
+    "mtime": "2026-11-23T01:34:43.832Z",
     "size": 6335,
-    "path": "../public/_nuxt/DXzEog1g.js"
+    "path": "../public/_nuxt/Bc97HB4F.js"
+  },
+  "/_nuxt/BHJNzuC4.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"a9a-JiWlKtj33nkqhgnSJdWO6R96+Xs\"",
+    "mtime": "2026-11-23T01:34:43.832Z",
+    "size": 2714,
+    "path": "../public/_nuxt/BHJNzuC4.js"
+  },
+  "/_nuxt/BhXIDVNq.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"7a-x/yEGBrmqVOm8Zh2FwQtu8sOnVw\"",
+    "mtime": "2026-11-23T01:34:43.832Z",
+    "size": 122,
+    "path": "../public/_nuxt/BhXIDVNq.js"
+  },
+  "/_nuxt/D417WHyw.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"5036-w2mfotAyogL/h4Ui4qQ1D4btRz4\"",
+    "mtime": "2026-11-23T01:34:43.844Z",
+    "size": 20534,
+    "path": "../public/_nuxt/D417WHyw.js"
   },
   "/_nuxt/error-404.DpKY_dMl.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"a8d-ikaaK5LbtZuaZygnIu5mAjYDRiQ\"",
-    "mtime": "2026-11-23T01:22:32.723Z",
+    "mtime": "2026-11-23T01:34:43.846Z",
     "size": 2701,
     "path": "../public/_nuxt/error-404.DpKY_dMl.css"
   },
-  "/_nuxt/CoG3fHCc.js": {
+  "/_nuxt/BIu_oi0B.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"2ca26-Tu23PlnglKNtSN7QbpvmEOPPb+E\"",
-    "mtime": "2026-11-23T01:22:32.715Z",
-    "size": 182822,
-    "path": "../public/_nuxt/CoG3fHCc.js"
+    "etag": "\"fdf-MsQ5+ShQLIcv+FeYxKbKMA+EObo\"",
+    "mtime": "2026-11-23T01:34:43.832Z",
+    "size": 4063,
+    "path": "../public/_nuxt/BIu_oi0B.js"
+  },
+  "/_nuxt/BDNMzG2s.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"54-MasMfSk/A98C3Gn9uIOxtFxkWNw\"",
+    "mtime": "2026-11-23T01:34:43.832Z",
+    "size": 84,
+    "path": "../public/_nuxt/BDNMzG2s.js"
+  },
+  "/_nuxt/CgvOKCJ3.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"7f90-ilO6t+uC8dpTc7Yhq9AQ3S0Pzos\"",
+    "mtime": "2026-11-23T01:34:43.844Z",
+    "size": 32656,
+    "path": "../public/_nuxt/CgvOKCJ3.js"
   },
   "/_nuxt/error-500.CmR4p1fc.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"79f-oUFNPOuVEcj5aJV0yQGGzo21VAE\"",
-    "mtime": "2026-11-23T01:22:32.723Z",
+    "mtime": "2026-11-23T01:34:43.847Z",
     "size": 1951,
     "path": "../public/_nuxt/error-500.CmR4p1fc.css"
-  },
-  "/_nuxt/LMnYmy4V.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"fdf-P0B1/yX+rJ/j2GoeZunA20DAwAY\"",
-    "mtime": "2026-11-23T01:22:32.722Z",
-    "size": 4063,
-    "path": "../public/_nuxt/LMnYmy4V.js"
-  },
-  "/_nuxt/order-success.D3Fl7Ph0.css": {
-    "type": "text/css; charset=utf-8",
-    "etag": "\"ae-ASiLyzNnL9c8HftFsqKLUjh/HTY\"",
-    "mtime": "2026-11-23T01:22:32.725Z",
-    "size": 174,
-    "path": "../public/_nuxt/order-success.D3Fl7Ph0.css"
-  },
-  "/_nuxt/DbPAbuYN.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"14f9c-FzN3IPnxyyjmK9jt44jZ7Oqtym8\"",
-    "mtime": "2026-11-23T01:22:32.721Z",
-    "size": 85916,
-    "path": "../public/_nuxt/DbPAbuYN.js"
   },
   "/_nuxt/entry.B2l24Snm.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"11851-T5MaWYLen2t5lvZ4tIuq6k3wxH0\"",
-    "mtime": "2026-11-23T01:22:32.723Z",
+    "mtime": "2026-11-23T01:34:43.846Z",
     "size": 71761,
     "path": "../public/_nuxt/entry.B2l24Snm.css"
   },
-  "/_nuxt/xWgZwqyI.js": {
+  "/_nuxt/BkTUEw9q.js": {
     "type": "text/javascript; charset=utf-8",
-    "etag": "\"44ce-oo0uzqS+dXfJBev966APxvYCHe4\"",
-    "mtime": "2026-11-23T01:22:32.723Z",
-    "size": 17614,
-    "path": "../public/_nuxt/xWgZwqyI.js"
+    "etag": "\"3b126-5dUULWRoNxSdBX2IsWtEGCn/ArY\"",
+    "mtime": "2026-11-23T01:34:43.844Z",
+    "size": 241958,
+    "path": "../public/_nuxt/BkTUEw9q.js"
   },
   "/_nuxt/pages.DQi0mXom.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"b2-141bNoYiholVbdbv0VVKkziYGoA\"",
-    "mtime": "2026-11-23T01:22:32.725Z",
+    "mtime": "2026-11-23T01:34:43.847Z",
     "size": 178,
     "path": "../public/_nuxt/pages.DQi0mXom.css"
   },
+  "/_nuxt/esOzLoS9.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"44ce-WZOgkP5hWEogbpYFOp+uI9ilPKk\"",
+    "mtime": "2026-11-23T01:34:43.844Z",
+    "size": 17614,
+    "path": "../public/_nuxt/esOzLoS9.js"
+  },
+  "/_nuxt/DneiiLnh.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"2ca26-uBUdFrya5FUGOqbM7YDEA8doQIU\"",
+    "mtime": "2026-11-23T01:34:43.832Z",
+    "size": 182822,
+    "path": "../public/_nuxt/DneiiLnh.js"
+  },
+  "/_nuxt/order-success.D3Fl7Ph0.css": {
+    "type": "text/css; charset=utf-8",
+    "etag": "\"ae-ASiLyzNnL9c8HftFsqKLUjh/HTY\"",
+    "mtime": "2026-11-23T01:34:43.847Z",
+    "size": 174,
+    "path": "../public/_nuxt/order-success.D3Fl7Ph0.css"
+  },
+  "/_nuxt/oU14EIb2.js": {
+    "type": "text/javascript; charset=utf-8",
+    "etag": "\"14ff4-fARFTo9Zej+l9bTaiXt2yPOcAos\"",
+    "mtime": "2026-11-23T01:34:43.846Z",
+    "size": 86004,
+    "path": "../public/_nuxt/oU14EIb2.js"
+  },
   "/_nuxt/builds/latest.json": {
     "type": "application/json",
-    "etag": "\"47-QBpn5TQftNSkydj6AjZb/H+xjsA\"",
-    "mtime": "2026-11-23T01:22:33.632Z",
+    "etag": "\"47-TGfv5a7lDK8WAAXGmDDEE8h19mk\"",
+    "mtime": "2026-11-23T01:34:44.766Z",
     "size": 71,
     "path": "../public/_nuxt/builds/latest.json"
   },
-  "/_nuxt/RHapCkh7.js": {
-    "type": "text/javascript; charset=utf-8",
-    "etag": "\"3b126-ucP1XgzZtee0xHBU7IVgBEi9ASQ\"",
-    "mtime": "2026-11-23T01:22:32.722Z",
-    "size": 241958,
-    "path": "../public/_nuxt/RHapCkh7.js"
-  },
-  "/_nuxt/builds/meta/58268fae-2e5a-407e-9209-82681c92522f.json": {
+  "/_nuxt/builds/meta/0e514279-0ac0-4c73-b693-2c341fc4a62d.json": {
     "type": "application/json",
-    "etag": "\"58-vLxSf9qNv4nk8SGxsG6lSqKrkrg\"",
-    "mtime": "2026-11-23T01:22:33.633Z",
+    "etag": "\"58-orSDLIwuNyBEs2ouQaD94Q+JiUo\"",
+    "mtime": "2026-11-23T01:34:44.766Z",
     "size": 88,
-    "path": "../public/_nuxt/builds/meta/58268fae-2e5a-407e-9209-82681c92522f.json"
+    "path": "../public/_nuxt/builds/meta/0e514279-0ac0-4c73-b693-2c341fc4a62d.json"
   }
 };
 
