@@ -957,7 +957,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-Cvt2Krel.mjs')
+		component: () => import('../build/admin-DuNYgJCy.mjs')
 	},
 	{
 		name: "order-success",
@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-Aiae0Zu3.mjs')
+		component: () => import('../build/pages-1OF-uWuu.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -2054,14 +2054,17 @@ function useWisataApi() {
 		const status = error?.response?.status;
 		const reqUrl = String(originalRequest?.url || "");
 		const isAuthEndpoint = reqUrl.includes("/auth/login") || reqUrl.includes("/auth/refresh") || reqUrl.includes("/auth/forgot-password") || reqUrl.includes("/auth/reset-password");
-		if (status === 401 && originalRequest && !originalRequest._retry && !isAuthEndpoint) {
-			originalRequest._retry = true;
-			const newToken = await refreshAdminToken();
-			if (newToken) {
-				originalRequest.headers = originalRequest.headers || {};
-				originalRequest.headers.Authorization = `Bearer ${newToken}`;
-				return apiClient(originalRequest);
+		if (status === 401 && originalRequest && !isAuthEndpoint) {
+			if (!originalRequest._retry) {
+				originalRequest._retry = true;
+				const newToken = await refreshAdminToken();
+				if (newToken) {
+					originalRequest.headers = originalRequest.headers || {};
+					originalRequest.headers.Authorization = `Bearer ${newToken}`;
+					return apiClient(originalRequest);
+				}
 			}
+			forceSessionExpiredRedirect();
 		}
 		return Promise.reject(error);
 	});
@@ -2466,13 +2469,18 @@ function useWisataApi() {
 		adminToken.value = null;
 		currentAdmin.value = null;
 	};
+	const forceSessionExpiredRedirect = () => {
+		adminToken.value = null;
+		currentAdmin.value = null;
+	};
 	const refreshAdminToken = async () => {
 		if (refreshPromise) return refreshPromise;
 		refreshPromise = (async () => {
 			try {
+				forceSessionExpiredRedirect();
 				return null;
 			} catch (_) {
-				logoutAdmin();
+				forceSessionExpiredRedirect();
 			} finally {
 				refreshPromise = null;
 			}
@@ -2653,41 +2661,6 @@ function useWisataApi() {
 	const deleteDestinationAdmin = async (id) => {
 		try {
 			const res = await apiClient.delete(`/destinations/${id}`, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
-			return res.data?.data !== void 0 ? res.data.data : res.data;
-		} catch (err) {
-			throw new Error(parseErrorMessage(err));
-		}
-	};
-	const getMasterSpots = async (region, all = true) => {
-		try {
-			const res = await apiClient.get("/destinations/spots", { params: {
-				...region ? { region } : {},
-				all: all ? "true" : "false"
-			} });
-			const data = res.data?.data !== void 0 ? res.data.data : res.data;
-			if (Array.isArray(data)) return data;
-		} catch (_) {}
-		return [];
-	};
-	const createMasterSpotAdmin = async (spot) => {
-		try {
-			const res = await apiClient.post("/destinations/spots", spot, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
-			return res.data?.data !== void 0 ? res.data.data : res.data;
-		} catch (err) {
-			throw new Error(parseErrorMessage(err));
-		}
-	};
-	const updateMasterSpotAdmin = async (id, spot) => {
-		try {
-			const res = await apiClient.put(`/destinations/spots/${id}`, spot, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
-			return res.data?.data !== void 0 ? res.data.data : res.data;
-		} catch (err) {
-			throw new Error(parseErrorMessage(err));
-		}
-	};
-	const deleteMasterSpotAdmin = async (id) => {
-		try {
-			const res = await apiClient.delete(`/destinations/spots/${id}`, { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
 			return res.data?.data !== void 0 ? res.data.data : res.data;
 		} catch (err) {
 			throw new Error(parseErrorMessage(err));
@@ -2990,6 +2963,18 @@ function useWisataApi() {
 			throw new Error(parseErrorMessage(err));
 		}
 	};
+	const getMasterSpots = async (destinationId = "", all = false) => {
+		try {
+			const params = new URLSearchParams();
+			if (destinationId) params.set("destinationId", destinationId);
+			if (all) params.set("all", "true");
+			const res = await apiClient.get(`/destinations/spots/list?${params.toString()}`);
+			const data = res.data?.data !== void 0 ? res.data.data : res.data;
+			return Array.isArray(data) ? data : [];
+		} catch (_) {
+			return [];
+		}
+	};
 	const getMasterTaxes = async (onlyActive = false) => {
 		try {
 			const res = await apiClient.get(`/masters/taxes?active=${onlyActive}`);
@@ -3190,10 +3175,6 @@ function useWisataApi() {
 		createDestinationAdmin,
 		updateDestinationAdmin,
 		deleteDestinationAdmin,
-		getMasterSpots,
-		createMasterSpotAdmin,
-		updateMasterSpotAdmin,
-		deleteMasterSpotAdmin,
 		getAllDurationsAdmin,
 		createDurationAdmin,
 		updateDurationAdmin,
@@ -3218,6 +3199,7 @@ function useWisataApi() {
 		createMasterDiscountType,
 		updateMasterDiscountType,
 		deleteMasterDiscountType,
+		getMasterSpots,
 		getMasterTaxes,
 		getActiveMasterTax,
 		createMasterTaxAdmin,
