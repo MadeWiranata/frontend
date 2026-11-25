@@ -957,7 +957,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-DuNYgJCy.mjs')
+		component: () => import('../build/admin-CiogrnCS.mjs')
 	},
 	{
 		name: "order-success",
@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-1OF-uWuu.mjs')
+		component: () => import('../build/pages-Bz-QQMSy.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -1217,6 +1217,15 @@ function useHead(input, options = {}) {
 		...options
 	});
 }
+// node_modules/nuxt/dist/app/diagnostics/state.js
+/**
+* E7xxx
+* Payload / state / cookie runtime diagnostics.
+*/
+var stateDiagnostics = /* #__PURE__ */ defineProdDiagnostics({
+	docsBase,
+	reporters: prodReporters
+});
 // node_modules/nuxt/dist/app/composables/payload.js
 /**
 * This is an experimental function for configuring passing rich data from server -> client.
@@ -1724,7 +1733,49 @@ function mergeAbortSignals(signals, cleanupSignal, timeout) {
 	});
 	return controller.signal;
 }
+// node_modules/nuxt/dist/app/composables/state.js
+var useStateKeyPrefix = "$s";
+function useState(...args) {
+	const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
+	if (typeof args[0] !== "string") args.unshift(autoKey);
+	const [_key, init] = args;
+	if (!_key || typeof _key !== "string") throw stateDiagnostics.NUXT_E7009({ key: _key });
+	if (init !== void 0 && typeof init !== "function") throw stateDiagnostics.NUXT_E7007({ type: typeof init });
+	const key = useStateKeyPrefix + _key;
+	const nuxtApp = useNuxtApp();
+	const state = toRef(nuxtApp.payload.state, key);
+	if (init) nuxtApp._state[key] ??= { _default: init };
+	if (state.value === void 0 && init) {
+		const initialValue = init();
+		if (isRef(initialValue)) {
+			nuxtApp.payload.state[key] = initialValue;
+			return state;
+		}
+		state.value = initialValue;
+	}
+	return state;
+}
 // app/composables/useWisataApi.ts
+var globalRefreshPromise = null;
+var decodeJwtExpMs = (token) => {
+	if (!token || typeof token !== "string") return null;
+	const parts = token.split(".");
+	if (parts.length !== 3) return null;
+	try {
+		const base64 = parts[1].replace(/-/g, "+").replace(/_/g, "/");
+		const padded = base64 + "=".repeat((4 - base64.length % 4) % 4);
+		const json = Buffer.from(padded, "base64").toString("utf8");
+		const payload = JSON.parse(json);
+		return typeof payload?.exp === "number" ? payload.exp * 1e3 : null;
+	} catch {
+		return null;
+	}
+};
+var isJwtExpired = (token, bufferSeconds = 30) => {
+	const expMs = decodeJwtExpMs(token);
+	if (!expMs) return false;
+	return Date.now() + bufferSeconds * 1e3 >= expMs;
+};
 var broadcastSyncEvent = (action, payload) => {};
 var onSyncEvent = (callback) => {
 	return () => {};
@@ -2040,10 +2091,19 @@ function useWisataApi() {
 			"x-turnstile-token": "1x00000000000000000000AA"
 		}
 	});
-	let refreshPromise = null;
-	apiClient.interceptors.request.use((reqConfig) => {
-		const token = adminToken.value || null;
-		if (token && !reqConfig.headers?.Authorization) {
+	apiClient.interceptors.request.use(async (reqConfig) => {
+		const reqUrl = String(reqConfig?.url || "");
+		const isAuthEndpoint = reqUrl.includes("/auth/login") || reqUrl.includes("/auth/refresh") || reqUrl.includes("/auth/logout") || reqUrl.includes("/auth/forgot-password") || reqUrl.includes("/auth/reset-password");
+		let token = adminToken.value || null;
+		if (token && !isAuthEndpoint && isJwtExpired(token, 30)) {
+			const refreshed = await refreshAdminToken();
+			if (refreshed) token = refreshed;
+			else {
+				forceSessionExpiredRedirect("Sesi login telah berakhir. Silakan login kembali.");
+				return Promise.reject(new axios.Cancel("Session expired"));
+			}
+		}
+		if (token) {
 			reqConfig.headers = reqConfig.headers || {};
 			reqConfig.headers.Authorization = `Bearer ${token}`;
 		}
@@ -2117,11 +2177,9 @@ function useWisataApi() {
 			const res = await apiClient.get("/categories/active-list");
 			isOnline.value = true;
 			const data = res.data?.data !== void 0 ? res.data.data : res.data;
-			let list = Array.isArray(data) ? data : [];
-			if (list.length === 0) list = [...DEFAULT_MASTER_CATEGORIES];
-			return list;
+			return Array.isArray(data) ? data : [];
 		} catch (err) {
-			return [...DEFAULT_MASTER_CATEGORIES];
+			return [];
 		}
 	};
 	const getDestinations = async () => {
@@ -2129,11 +2187,9 @@ function useWisataApi() {
 			const res = await apiClient.get("/destinations/active-list");
 			isOnline.value = true;
 			const data = res.data?.data !== void 0 ? res.data.data : res.data;
-			let list = Array.isArray(data) ? data : [];
-			if (list.length === 0) list = [...DEFAULT_MASTER_DESTINATIONS];
-			return list;
+			return Array.isArray(data) ? data : [];
 		} catch (err) {
-			return [...DEFAULT_MASTER_DESTINATIONS];
+			return [];
 		}
 	};
 	const getDurations = async () => {
@@ -2419,8 +2475,11 @@ function useWisataApi() {
 			throw new Error(parseErrorMessage(err) || "Gagal menyimpan profil perusahaan ke server.");
 		}
 	};
-	const adminToken = ref(null);
-	const currentAdmin = ref(null);
+	const adminToken = useState("wisata_admin_token", () => null);
+	const currentAdmin = useState("wisata_admin_user", () => {
+		return null;
+	});
+	const authSessionExpiredMsg = useState("wisata_auth_expired_msg", () => "");
 	const loginAdmin = async (credentials) => {
 		try {
 			const res = await apiClient.post("/auth/login", {
@@ -2439,6 +2498,7 @@ function useWisataApi() {
 			};
 			adminToken.value = token;
 			currentAdmin.value = user;
+			authSessionExpiredMsg.value = "";
 			return {
 				token,
 				user
@@ -2462,31 +2522,38 @@ function useWisataApi() {
 			throw new Error(parseErrorMessage(err));
 		}
 	};
-	const logoutAdmin = async () => {
-		try {
-			if (adminToken.value) await apiClient.post("/auth/logout", {}, { headers: { Authorization: `Bearer ${adminToken.value}` } }).catch(() => {});
-		} catch (_) {}
+	const logoutAdmin = () => {
+		const tokenToRevoke = adminToken.value;
 		adminToken.value = null;
 		currentAdmin.value = null;
+		authSessionExpiredMsg.value = "";
+		if (tokenToRevoke && !isJwtExpired(tokenToRevoke, 0)) axios.post(`${apiBase}/auth/logout`, {}, {
+			headers: { Authorization: `Bearer ${tokenToRevoke}` },
+			timeout: 3e3
+		}).catch(() => {});
 	};
-	const forceSessionExpiredRedirect = () => {
+	const forceSessionExpiredRedirect = (message = "Sesi login Anda telah berakhir. Silakan login kembali.") => {
 		adminToken.value = null;
 		currentAdmin.value = null;
+		authSessionExpiredMsg.value = message;
 	};
 	const refreshAdminToken = async () => {
-		if (refreshPromise) return refreshPromise;
-		refreshPromise = (async () => {
+		if (globalRefreshPromise) return globalRefreshPromise;
+		globalRefreshPromise = (async () => {
 			try {
 				forceSessionExpiredRedirect();
 				return null;
 			} catch (_) {
 				forceSessionExpiredRedirect();
 			} finally {
-				refreshPromise = null;
+				globalRefreshPromise = null;
 			}
 			return null;
 		})();
-		return refreshPromise;
+		return globalRefreshPromise;
+	};
+	const ensureValidAdminSession = async () => {
+		return false;
 	};
 	const requestForgotPasswordOtp = async (email, turnstileToken) => {
 		const res = await apiClient.post("/auth/forgot-password", {
@@ -2741,7 +2808,7 @@ function useWisataApi() {
 		formData.append("file", file);
 		try {
 			const res = await apiClient.post("/upload", formData, { headers: {
-				"Content-Type": "multipart/form-data",
+				"Content-Type": void 0,
 				...adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {}
 			} });
 			const data = res.data?.data !== void 0 ? res.data.data : res.data;
@@ -3139,6 +3206,7 @@ function useWisataApi() {
 		apiError,
 		adminToken,
 		currentAdmin,
+		authSessionExpiredMsg,
 		getTours,
 		getBestSellers,
 		getPromos,
@@ -3159,6 +3227,7 @@ function useWisataApi() {
 		loginAdmin,
 		logoutAdmin,
 		refreshAdminToken,
+		ensureValidAdminSession,
 		requestForgotPasswordOtp,
 		submitResetPasswordOtp,
 		getAdminLoginLogs,
@@ -3244,6 +3313,7 @@ var app_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 			return "image/x-icon";
 		});
 		const pageTitle = computed(() => {
+			if (company.value?.browserTitle?.trim()) return company.value.browserTitle.trim();
 			return `${company.value?.brandName || company.value?.companyName || "Trip Nusa Penida Explore"} - ${company.value?.tagline || "Platform Booking Wisata & Fast Boat"}`;
 		});
 		useHead(() => ({
