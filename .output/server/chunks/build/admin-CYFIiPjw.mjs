@@ -179,9 +179,9 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 			legalName: "Trip Nusapenida Explore",
 			tagline: "Eksplorasi Keindahan Laut & Pulau Eksotis Nusapenida",
 			description: "Penyedia layanan reservasi paket wisata Nusa Penida terpercaya.",
-			logoUrl: "/favicon.png",
+			logoUrl: "/logo-trip.png",
 			logoDarkUrl: "",
-			faviconUrl: "/favicon.png",
+			faviconUrl: "/logo-trip.png",
 			email: "info@tripnusapenidaexplore.my.id",
 			phone: "+62 823-4207-8184",
 			whatsapp: "+62 823-4207-8184",
@@ -1354,4 +1354,4 @@ index_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var admin_default = index_vue_vue_type_script_setup_true_lang_default;
 
 export { admin_default as default };
-//# sourceMappingURL=admin-B5sgVVdG.mjs.map
+//# sourceMappingURL=admin-CYFIiPjw.mjs.map

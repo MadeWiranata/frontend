@@ -957,7 +957,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-B5sgVVdG.mjs')
+		component: () => import('../build/admin-CYFIiPjw.mjs')
 	},
 	{
 		name: "order-success",
@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-DS37zeWn.mjs')
+		component: () => import('../build/pages-CDx3nYsH.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -2299,9 +2299,9 @@ function useWisataApi() {
 			legalName: "Trip Nusapenida Explore",
 			tagline: "Eksplorasi Keindahan Laut & Pulau Eksotis Nusapenida",
 			description: "Penyedia layanan reservasi paket wisata Nusa Penida terpercaya.",
-			logoUrl: "/favicon.png",
+			logoUrl: "/logo-trip.png",
 			logoDarkUrl: "",
-			faviconUrl: "/favicon.png",
+			faviconUrl: "/logo-trip.png",
 			email: "info@tripnusapenidaexplore.my.id",
 			phone: "+62 823-4207-8184",
 			whatsapp: "+62 823-4207-8184",
@@ -3162,7 +3162,7 @@ var app_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 		const { data: company } = ([__temp, __restore] = withAsyncContext(() => useAsyncData("app-company-profile", () => getCompanyProfile())), __temp = await __temp, __restore(), __temp);
 		const faviconHref = computed(() => {
 			const url = company.value?.faviconUrl || company.value?.logoUrl;
-			if (!url) return "/favicon.png";
+			if (!url || url === "/favicon.png") return "/logo-trip.png";
 			return getImageUrl(url);
 		});
 		const faviconType = computed(() => {
