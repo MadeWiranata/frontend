@@ -957,7 +957,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-BT1dYGmZ.mjs')
+		component: () => import('../build/admin-CY6Elptm.mjs')
 	},
 	{
 		name: "order-success",

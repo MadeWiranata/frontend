@@ -121,7 +121,7 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 			},
 			{
 				id: "statuses",
-				label: "Master Status",
+				label: "Master Status & PPN",
 				icon: "🚦"
 			},
 			{
@@ -1361,4 +1361,4 @@ index_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var admin_default = index_vue_vue_type_script_setup_true_lang_default;
 
 export { admin_default as default };
-//# sourceMappingURL=admin-BT1dYGmZ.mjs.map
+//# sourceMappingURL=admin-CY6Elptm.mjs.map
