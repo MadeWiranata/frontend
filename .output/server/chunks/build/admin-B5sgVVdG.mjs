@@ -2,7 +2,7 @@ import { N as NuxtLink } from './nuxt-link-BZR9fs_n.mjs';
 import { u as useWisataApi, a as useRuntimeConfig } from '../virtual/entry.mjs';
 import { _ as _virtual_public__2Fdana_logo_default } from './_virtual_public-DGG8jvQn.mjs';
 import { u as useTheme, s as ssrRenderList$2, S as SearchableSelect_default } from './useTheme-jR-NkPQp.mjs';
-import { defineComponent, ref, computed, watch, mergeProps, withCtx, unref, openBlock, createBlock, createVNode, toDisplayString, useSSRContext } from 'vue';
+import { defineComponent, ref, computed, watch, mergeProps, withCtx, unref, createVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrInterpolate, ssrIncludeBooleanAttr, ssrLooseContain, ssrLooseEqual, ssrRenderClass, ssrRenderStyle, ssrRenderDynamicModel } from 'vue/server-renderer';
 import '../_/nitro.mjs';
 import 'unhead/server';
@@ -174,60 +174,60 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 		const loginLogsList = ref([]);
 		const loginLogsSearch = ref("");
 		const company = ref({
-			companyName: "PT Wisata Bahari Indonesia",
-			brandName: "Booking Wisata Bahari",
-			legalName: "PT Wisata Bahari Indonesia Tbk",
-			tagline: "Eksplorasi Keindahan Laut & Pulau Eksotis Nusantara",
-			description: "Penyedia layanan reservasi paket wisata bahari, snorkeling Nusa Penida Manta Bay, tiket fast boat Sanur, dan private tour eksotis Indonesia.",
-			logoUrl: "",
+			companyName: "Trip Nusapenida Explore",
+			brandName: "Trip Nusapenida Explore",
+			legalName: "Trip Nusapenida Explore",
+			tagline: "Eksplorasi Keindahan Laut & Pulau Eksotis Nusapenida",
+			description: "Penyedia layanan reservasi paket wisata Nusa Penida terpercaya.",
+			logoUrl: "/favicon.png",
 			logoDarkUrl: "",
-			faviconUrl: "",
-			email: "info@wisatabahari.com",
-			phone: "+62 812-3456-7890",
-			whatsapp: "+62 812-3456-7890",
-			address: "Jl. Hang Tuah No. 45, Sanur Kaja, Denpasar Selatan",
-			city: "Denpasar",
+			faviconUrl: "/favicon.png",
+			email: "info@tripnusapenidaexplore.my.id",
+			phone: "+62 823-4207-8184",
+			whatsapp: "+62 823-4207-8184",
+			address: "Jl. Klumpu, Nusa Penida",
+			city: "Klungkung",
 			province: "Bali",
 			postalCode: "80228",
-			bankName: "Bank Central Asia (BCA)",
-			bankAccountNumber: "8830192831",
-			bankAccountName: "PT WISATA BAHARI INDONESIA",
-			footerText: "© 2026 PT Wisata Bahari Indonesia. Seluruh hak cipta dilindungi undang-undang.",
+			bankName: "Bank Rakyat Indonesia (BRI)",
+			bankAccountNumber: "",
+			bankAccountName: "",
+			footerText: "© 2026 tripnusapenidaexplore. Seluruh hak cipta dilindungi undang-undang.",
 			popularDestinations: "",
 			browserTitle: "",
-			heroBadge: "🌊 Platform Booking Wisata Bahari Terpercaya #1",
-			heroTitle: "Jelajahi Surga Bawah Laut Indonesia",
-			heroSubtitle: "Nikmati petualangan bahari tak terlupakan dengan paket snorkeling Manta Bay, diving terumbu karang eksotis, dan tiket fast boat resmi bergaransi.",
-			heroCtaPrimary: "Pilih Paket Wisata",
-			heroCtaSecondary: "Lihat Promo Spesial",
-			heroImageUrl: "/images/hero-banner-bali.jpg",
+			heroBadge: "🌊 Platform Booking Wisata Nusapenida Resmi #1",
+			heroTitle: "Jelajahi Pesona Alam Yang Indah di Nusa Penida",
+			heroSubtitle: "Nikmati petualangan menjelajahi alam Nusa Penida dengan aman dan bergaransi.",
+			heroCtaPrimary: "Cari Paket Wisata",
+			heroCtaSecondary: "Cek Tiket / Booking",
+			heroImageUrl: "",
 			heroCardBadge: "Destinasi Terfavorit",
 			heroFeaturedTourId: "",
 			heroFeaturedPromoId: "",
-			heroStatsCount1: "50K+",
-			heroStatsLabel1: "Wisatawan Bahari Terlayani",
-			heroStatsCount2: "100%",
-			heroStatsLabel2: "Garansi Berangkat Tepat Waktu",
-			heroStatsCount3: "4.9★",
-			heroStatsLabel3: "Rating Kepuasan Pelanggan",
+			heroStatsCount1: "15k+",
+			heroStatsLabel1: "Pelanggan Puas",
+			heroStatsCount2: "99%",
+			heroStatsLabel2: "Tingkat Kepuasan",
+			heroStatsCount3: "4.9",
+			heroStatsLabel3: "Rating Wisatawan",
 			heroStatsCount4: "24/7",
 			heroStatsLabel4: "Dukungan CS",
-			announcementText: "🌊 Promo Liburan Bahari: Dapatkan Diskon s/d 20% dengan kode",
-			announcementMobile: "🌊 Promo Spesial Bahari s/d 20% OFF",
-			announcementPromoCode: "WISATAHEMAT20",
+			announcementText: "🌊 Promo Spesial Trip Nusa Penida — Pesan Sekarang!",
+			announcementMobile: "🌊 Promo Trip Nusa Penida",
+			announcementPromoCode: "",
 			operatingHours: "Buka Setiap Hari (06:00 - 21:00 WITA)",
-			facebookUrl: "https://facebook.com/wisatabahari",
-			instagramUrl: "https://instagram.com/wisatabahari",
-			youtubeUrl: "https://youtube.com/@wisatabahari",
-			tiktokUrl: "https://tiktok.com/@wisatabahari",
-			categoriesTitle: "Kategori Petualangan Laut",
-			categoriesSubtitle: "Pilih jenis petualangan bahari sesuai gaya liburan impian Anda",
-			toursTitle: "Katalog Paket Wisata Favorit",
-			toursSubtitle: "Pilihan tur laut & kepulauan paling populer dengan fasilitas terlengkap",
-			promosTitle: "Promo Eksklusif Wisata Bahari",
-			promosSubtitle: "Gunakan kupon diskon spesial untuk liburan bahari lebih hemat bersama keluarga & sahabat",
-			testimonialsTitle: "Apa Kata Wisatawan Kami?",
-			testimonialsSubtitle: "Cerita nyata dan ulasan jujur dari ribuan petualang laut yang telah berlayar bersama kami"
+			facebookUrl: "",
+			instagramUrl: "",
+			youtubeUrl: "",
+			tiktokUrl: "",
+			categoriesTitle: "Kategori Wisata Pilihan",
+			categoriesSubtitle: "Pilihan aktivitas wisata terbaik di Nusa Penida",
+			toursTitle: "Katalog Paket Wisata Populer",
+			toursSubtitle: "Daftar paket wisata terbaik dengan konfirmasi instan dan harga transparan",
+			promosTitle: "Promo & Penawaran Spesial",
+			promosSubtitle: "Gunakan kupon diskon eksklusif untuk liburan lebih hemat",
+			testimonialsTitle: "Kata Mereka yang Telah Berlibur",
+			testimonialsSubtitle: "Ulasan jujur dari wisatawan yang telah menikmati liburan bersama kami"
 		});
 		const savingCompany = ref(false);
 		const toastMessage = ref("");
@@ -740,19 +740,12 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 				class: "flex items-center gap-2.5 group"
 			}, {
 				default: withCtx((_, _push, _parent, _scopeId) => {
-					if (_push) {
-						if (company.value.logoUrl) _push(`<img${ssrRenderAttr("src", unref(getImageUrl)(company.value.logoUrl))}${ssrRenderAttr("alt", company.value.brandName || "Logo")} class="h-10 max-w-[140px] object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform"${_scopeId}>`);
-						else _push(`<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform"${_scopeId}> 🌊 </div>`);
-						_push(`<div${_scopeId}><span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight"${_scopeId}>${ssrInterpolate(company.value.brandName || "Admin Panel")}</span><span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold"${_scopeId}>${ssrInterpolate(company.value.companyName || "Master Data Management")}</span></div>`);
-					} else return [company.value.logoUrl ? (openBlock(), createBlock("img", {
-						key: 0,
-						src: unref(getImageUrl)(company.value.logoUrl),
-						alt: company.value.brandName || "Logo",
+					if (_push) _push(`<img${ssrRenderAttr("src", company.value.logoUrl ? unref(getImageUrl)(company.value.logoUrl) : "/favicon.png")}${ssrRenderAttr("alt", company.value.brandName || "Trip Nusapenida Explore")} class="h-10 max-w-[140px] object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform"${_scopeId}><div${_scopeId}><span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight"${_scopeId}>${ssrInterpolate(company.value.brandName || "Admin Panel")}</span><span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold"${_scopeId}>${ssrInterpolate(company.value.companyName || "Master Data Management")}</span></div>`);
+					else return [createVNode("img", {
+						src: company.value.logoUrl ? unref(getImageUrl)(company.value.logoUrl) : "/favicon.png",
+						alt: company.value.brandName || "Trip Nusapenida Explore",
 						class: "h-10 max-w-[140px] object-contain rounded-xl shadow-sm group-hover:scale-105 transition-transform"
-					}, null, 8, ["src", "alt"])) : (openBlock(), createBlock("div", {
-						key: 1,
-						class: "w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform"
-					}, " 🌊 ")), createVNode("div", null, [createVNode("span", { class: "font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight" }, toDisplayString(company.value.brandName || "Admin Panel"), 1), createVNode("span", { class: "text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold" }, toDisplayString(company.value.companyName || "Master Data Management"), 1)])];
+					}, null, 8, ["src", "alt"]), createVNode("div", null, [createVNode("span", { class: "font-extrabold text-lg tracking-tight bg-gradient-to-r from-teal-600 to-cyan-600 dark:from-teal-400 dark:to-cyan-400 bg-clip-text text-transparent block leading-tight" }, toDisplayString(company.value.brandName || "Admin Panel"), 1), createVNode("span", { class: "text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-semibold" }, toDisplayString(company.value.companyName || "Master Data Management"), 1)])];
 				}),
 				_: 1
 			}, _parent));
@@ -1361,4 +1354,4 @@ index_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var admin_default = index_vue_vue_type_script_setup_true_lang_default;
 
 export { admin_default as default };
-//# sourceMappingURL=admin-CY6Elptm.mjs.map
+//# sourceMappingURL=admin-B5sgVVdG.mjs.map
