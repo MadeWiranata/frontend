@@ -1,9 +1,10 @@
 import { u as useWisataApi, c as useAsyncData } from '../virtual/entry.mjs';
 import { _ as _virtual_public__2Fdana_logo_default, s as setInterval } from './_virtual_public-DGG8jvQn.mjs';
-import { u as useLanguage } from './useLanguage-CfLKp10j.mjs';
+import { u as useLanguage } from './useLanguage-CoSwGzMA.mjs';
 import { u as useTheme, s as ssrRenderList$2, S as SearchableSelect_default } from './useTheme-jR-NkPQp.mjs';
 import { _ as _plugin_vue_export_helper_default } from './_plugin-vue_export-helper-DjkACiAr.mjs';
 import { defineComponent, ref, withAsyncContext, mergeProps, unref, computed, watch, useSSRContext } from 'vue';
+import { p as publicAssetsURL } from '../routes/renderer.mjs';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderAttr, ssrRenderComponent, ssrRenderStyle, ssrIncludeBooleanAttr, ssrLooseContain, ssrLooseEqual, ssrRenderClass } from 'vue/server-renderer';
 import 'nostics';
 import 'nostics/formatters/ansi';
@@ -19,13 +20,14 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
-import '../routes/renderer.mjs';
-import 'vue-bundle-renderer/runtime';
-import 'devalue';
 import 'vue-router';
 import 'unhead/utils';
 import 'axios';
+import 'vue-bundle-renderer/runtime';
+import 'devalue';
 
+// \0virtual:public?%2Ffavicon.png
+var _virtual_public__2Ffavicon_default = publicAssetsURL("/favicon.png");
 // app/components/Navbar.vue?vue&type=script&setup=true&lang.ts
 var Navbar_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComponent({
 	__name: "Navbar",
@@ -74,7 +76,7 @@ var Navbar_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCom
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<header${ssrRenderAttrs(mergeProps({ class: ["sticky top-0 z-40 transition-all duration-200 border-b", [isScrolled.value ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm border-slate-200 dark:border-slate-800" : "bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-transparent"]] }, _attrs))}><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-20"><a href="#hero" class="flex items-center gap-3 group">`);
 			if (logoSrc.value) _push(`<div class="h-11 max-w-[160px] flex items-center justify-center shrink-0"><img${ssrRenderAttr("src", logoSrc.value)}${ssrRenderAttr("alt", displayBrandName.value)} class="max-h-11 max-w-full object-contain rounded-xl shadow-sm"></div>`);
-			else _push(`<div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-teal-500 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-teal-500/25 group-hover:scale-105 transition-transform shrink-0"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>`);
+			else _push(`<div class="h-11 max-w-[160px] flex items-center justify-center shrink-0"><img${ssrRenderAttr("src", _virtual_public__2Ffavicon_default)}${ssrRenderAttr("alt", displayBrandName.value)} class="max-h-11 max-w-full object-contain rounded-xl shadow-sm"></div>`);
 			_push(`<div><span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 dark:from-teal-400 dark:via-cyan-300 dark:to-blue-400 bg-clip-text text-transparent">${ssrInterpolate(displayBrandName.value)}</span><span class="block text-xs font-semibold text-slate-500 dark:text-slate-400 -mt-1 tracking-wider uppercase">${ssrInterpolate(displayTagline.value)}</span></div></a><nav class="hidden md:flex items-center gap-1 lg:gap-2"><a href="#hero" class="px-3 py-2 text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">${ssrInterpolate(unref(t)("nav.home"))}</a><a href="#tours" class="px-3 py-2 text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">${ssrInterpolate(unref(t)("nav.tours"))}</a><a href="#categories" class="px-3 py-2 text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">${ssrInterpolate(unref(t)("nav.categories"))}</a><a href="#promos" class="px-3 py-2 text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">${ssrInterpolate(unref(t)("nav.promo"))}</a><a href="#testimonials" class="px-3 py-2 text-sm font-medium rounded-lg text-slate-700 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">${ssrInterpolate(unref(t)("nav.testimonials"))}</a></nav><div class="hidden md:flex items-center gap-3"><div class="relative"><button type="button" class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:border-teal-500 transition-all shadow-sm"${ssrRenderAttr("title", unref(locale) === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia")}><span class="text-base">${ssrInterpolate(unref(locale) === "id" ? "🇮🇩" : "🇬🇧")}</span><span class="tracking-wide">${ssrInterpolate(unref(locale) === "id" ? "ID" : "EN")}</span><svg class="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path></svg></button></div><button type="button" class="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all"${ssrRenderAttr("title", unref(isDark) ? unref(t)("nav.light") : unref(t)("nav.dark"))}>`);
 			if (unref(isDark)) _push(`<svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>`);
 			else _push(`<svg class="w-5 h-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>`);
@@ -511,7 +513,7 @@ var FooterSection_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ de
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-slate-900 text-slate-400 border-t border-slate-800 pt-16 pb-12" }, _attrs))}><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800"><div class="lg:col-span-2 space-y-4"><div class="flex items-center gap-3">`);
 			if (footerLogo.value) _push(`<div class="h-10 max-w-[140px] flex items-center justify-center shrink-0"><img${ssrRenderAttr("src", footerLogo.value)}${ssrRenderAttr("alt", __props.company?.brandName || unref(t)("nav.brand"))} class="max-h-10 max-w-full object-contain rounded-xl"></div>`);
-			else _push(`<div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-teal-500 to-cyan-500 flex items-center justify-center text-white font-black text-xl shadow-md shrink-0"> ⚓ </div>`);
+			else _push(`<div class="h-10 max-w-[140px] flex items-center justify-center shrink-0"><img${ssrRenderAttr("src", _virtual_public__2Ffavicon_default)}${ssrRenderAttr("alt", __props.company?.brandName || unref(t)("nav.brand"))} class="max-h-10 max-w-full object-contain rounded-xl"></div>`);
 			_push(`<div><span class="text-xl font-extrabold tracking-tight text-white">${ssrInterpolate(__props.company?.brandName || unref(t)("nav.brand"))}</span><span class="block text-xs font-semibold text-teal-400 uppercase tracking-wider -mt-1">${ssrInterpolate(__props.company?.tagline || unref(t)("nav.subtitle"))}</span></div></div><p class="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">${ssrInterpolate(__props.company?.description || unref(t)("footer.desc"))}</p><div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-teal-300"><span>🛡️</span><span>Reservasi Resmi &amp; Bergaransi</span></div>`);
 			if (hasSocialMedia.value) {
 				_push(`<div class="flex items-center gap-2.5 pt-2">`);
@@ -529,7 +531,7 @@ var FooterSection_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ de
 			ssrRenderList$2(popularDestinationsList.value, (destName, idx) => {
 				_push(`<li><a href="#tours" class="hover:text-teal-400 transition-colors">${ssrInterpolate(destName)}</a></li>`);
 			});
-			_push(`<!--]--></ul></div><div><h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">${ssrInterpolate(unref(t)("footer.contactTitle"))}</h4><ul class="space-y-2.5 text-xs sm:text-sm"><li class="leading-relaxed"> 📍 ${ssrInterpolate(fullAddress.value)}</li><li><a${ssrRenderAttr("href", `https://wa.me/${cleanPhone(__props.company?.whatsapp || __props.company?.phone)}`)} target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors inline-flex items-center gap-1.5"><span>📞</span><span>${ssrInterpolate(__props.company?.whatsapp || __props.company?.phone || unref(t)("footer.phone"))}</span></a></li><li><a${ssrRenderAttr("href", `mailto:${__props.company?.email || "info@wisatabahari.com"}`)} class="hover:text-teal-400 transition-colors inline-flex items-center gap-1.5"><span>✉️</span><span>${ssrInterpolate(__props.company?.email || unref(t)("footer.email"))}</span></a></li><li class="text-teal-400 font-semibold"> 🕒 ${ssrInterpolate(__props.company?.operatingHours || "Buka Setiap Hari (06:00 - 21:00 WITA)")}</li></ul></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500"><div class="flex items-center gap-2"><span>${ssrInterpolate(__props.company?.footerText || `© ${(/* @__PURE__ */ new Date()).getFullYear()} ${__props.company?.companyName || __props.company?.brandName || "Trip Nusa Penida Explore"}. All rights reserved.`)}</span></div><div class="flex flex-wrap items-center gap-3"><div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-slate-800/90 border border-slate-700/80 shadow-sm hover:border-[#108ee9]/50 transition-colors"><span class="text-[11px] font-medium text-slate-400">Didukung oleh</span><div class="h-5 px-1.5 rounded bg-white flex items-center justify-center shrink-0 shadow-xs"><img${ssrRenderAttr("src", _virtual_public__2Fdana_logo_default)} alt="DANA Official Logo" class="h-3.5 w-auto object-contain"></div><span class="text-xs font-bold text-slate-200"> DANA Gapura SaaS Payment Gateway </span></div><span class="px-2.5 py-1 rounded-lg bg-slate-800 text-[11px] font-bold text-rose-400 border border-slate-700">QRIS</span></div></div></div></footer>`);
+			_push(`<!--]--></ul></div><div><h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">${ssrInterpolate(unref(t)("footer.contactTitle"))}</h4><ul class="space-y-2.5 text-xs sm:text-sm"><li class="leading-relaxed"> 📍 ${ssrInterpolate(fullAddress.value)}</li><li><a${ssrRenderAttr("href", `https://wa.me/${cleanPhone(__props.company?.whatsapp || __props.company?.phone)}`)} target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors inline-flex items-center gap-1.5"><span>📞</span><span>${ssrInterpolate(__props.company?.whatsapp || __props.company?.phone || unref(t)("footer.phone"))}</span></a></li><li><a${ssrRenderAttr("href", `mailto:${__props.company?.email || "info@tripnusapenidaexplore.my.id"}`)} class="hover:text-teal-400 transition-colors inline-flex items-center gap-1.5"><span>✉️</span><span>${ssrInterpolate(__props.company?.email || unref(t)("footer.email"))}</span></a></li><li class="text-teal-400 font-semibold"> 🕒 ${ssrInterpolate(__props.company?.operatingHours || "Buka Setiap Hari (06:00 - 21:00 WITA)")}</li></ul></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500"><div class="flex items-center gap-2"><span>${ssrInterpolate(__props.company?.footerText || `© ${(/* @__PURE__ */ new Date()).getFullYear()} ${__props.company?.companyName || __props.company?.brandName || "Trip Nusa Penida Explore"}. All rights reserved.`)}</span></div><div class="flex flex-wrap items-center gap-3"><div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-slate-800/90 border border-slate-700/80 shadow-sm hover:border-[#108ee9]/50 transition-colors"><span class="text-[11px] font-medium text-slate-400">Didukung oleh</span><div class="h-5 px-1.5 rounded bg-white flex items-center justify-center shrink-0 shadow-xs"><img${ssrRenderAttr("src", _virtual_public__2Fdana_logo_default)} alt="DANA Official Logo" class="h-3.5 w-auto object-contain"></div><span class="text-xs font-bold text-slate-200"> DANA Gapura SaaS Payment Gateway </span></div><span class="px-2.5 py-1 rounded-lg bg-slate-800 text-[11px] font-bold text-rose-400 border border-slate-700">QRIS</span></div></div></div></footer>`);
 		};
 	}
 });
@@ -918,16 +920,16 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 		const { locale } = useLanguage();
 		const { getCompanyProfile} = useWisataApi();
 		const companyInfo = ref({
-			companyName: "Trip Nusa Penida Explore",
-			brandName: "Trip Nusa Penida Explore",
-			phone: "",
-			whatsapp: "+62 812-3456-7890",
-			email: "info@wisatabahari.com",
-			logoUrl: "",
-			footerText: "© 2026 PT Wisata Bahari Indonesia. All rights reserved.",
-			announcementText: "🌊 Promo Liburan Bahari: Dapatkan Diskon s/d 20% dengan kode",
-			announcementMobile: "🌊 Promo Spesial Bahari s/d 20% OFF",
-			announcementPromoCode: "WISATAHEMAT20",
+			companyName: "Trip Nusapenida Explore",
+			brandName: "Trip Nusapenida Explore",
+			phone: "+62 823-4207-8184",
+			whatsapp: "+62 823-4207-8184",
+			email: "info@tripnusapenidaexplore.my.id",
+			logoUrl: "/favicon.png",
+			footerText: "© 2026 tripnusapenidaexplore. Seluruh hak cipta dilindungi undang-undang.",
+			announcementText: "🌊 Promo Spesial Trip Nusa Penida — Pesan Sekarang!",
+			announcementMobile: "🌊 Promo Trip Nusa Penida",
+			announcementPromoCode: "",
 			operatingHours: "Buka Setiap Hari (06:00 - 21:00 WITA)"
 		});
 		const cleanPhone = (val) => {
@@ -990,7 +992,10 @@ var index_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineComp
 			isBookingModalOpen.value = true;
 		};
 		return (_ctx, _push, _parent, _attrs) => {
-			_push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300" }, _attrs))}><div class="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white text-xs font-semibold py-2 px-4 text-center"><div class="max-w-7xl mx-auto flex items-center justify-between"><span class="hidden sm:inline">${ssrInterpolate(companyInfo.value.announcementText || "🌊 Promo Liburan Bahari: Dapatkan Diskon s/d 20% dengan kode")} <span class="font-mono bg-white/20 px-1.5 py-0.5 rounded ml-1">${ssrInterpolate(companyInfo.value.announcementPromoCode || "WISATAHEMAT20")}</span></span><span class="sm:hidden">${ssrInterpolate(companyInfo.value.announcementMobile || "🌊 Promo Spesial Bahari s/d 20% OFF")}</span><div class="flex items-center gap-3 text-[11px]"><a${ssrRenderAttr("href", `https://wa.me/${cleanPhone(companyInfo.value.whatsapp || companyInfo.value.phone)}`)} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 opacity-90 hover:opacity-100 hover:underline transition-all"><span>📞 CS: ${ssrInterpolate(companyInfo.value.whatsapp || companyInfo.value.phone || "+62 812-3456-7890")}</span></a></div></div></div>`);
+			_push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300" }, _attrs))}><div class="bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 text-white text-xs font-semibold py-2 px-4 text-center"><div class="max-w-7xl mx-auto flex items-center justify-between"><span class="hidden sm:inline">${ssrInterpolate(companyInfo.value.announcementText || "🌊 Promo Spesial Trip Nusa Penida — Pesan Sekarang!")} `);
+			if (companyInfo.value.announcementPromoCode) _push(`<span class="font-mono bg-white/20 px-1.5 py-0.5 rounded ml-1">${ssrInterpolate(companyInfo.value.announcementPromoCode)}</span>`);
+			else _push(`<!---->`);
+			_push(`</span><span class="sm:hidden">${ssrInterpolate(companyInfo.value.announcementMobile || "🌊 Promo Trip Nusa Penida")}</span><div class="flex items-center gap-3 text-[11px]"><a${ssrRenderAttr("href", `https://wa.me/${cleanPhone(companyInfo.value.whatsapp || companyInfo.value.phone)}`)} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 opacity-90 hover:opacity-100 hover:underline transition-all"><span>📞 CS: ${ssrInterpolate(companyInfo.value.whatsapp || companyInfo.value.phone || "+62 823-4207-8184")}</span></a></div></div></div>`);
 			_push(ssrRenderComponent(Navbar_default, {
 				onOpenCheckBooking: ($event) => openCheckBookingModal(""),
 				"company-name": companyInfo.value.brandName,
@@ -1059,4 +1064,4 @@ index_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var pages_default = index_vue_vue_type_script_setup_true_lang_default;
 
 export { pages_default as default };
-//# sourceMappingURL=pages-FQJpCT8m.mjs.map
+//# sourceMappingURL=pages-BgDnb-cP.mjs.map

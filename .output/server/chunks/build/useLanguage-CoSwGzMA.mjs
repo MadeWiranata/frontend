@@ -162,7 +162,7 @@ var translations = {
 			paymentMethodLabel: "Metode Pembayaran",
 			qrBoardingPass: "QR Boarding Pass",
 			scanAtHarbor: "Scan di Pelabuhan / Lokasi",
-			tourPackage: "Paket Wisata Bahari:",
+			tourPackage: "Paket Wisata:",
 			customerName: "Nama Pemesan:",
 			customerEmail: "Email Pemesan:",
 			tripDate: "Tanggal Wisata:",
@@ -213,7 +213,7 @@ var translations = {
 			paymentMethod: "Metode Pembayaran",
 			qrTitle: "QR Boarding Pass",
 			scanNotice: "Scan di Pelabuhan / Lokasi",
-			tourTitle: "Paket Wisata Bahari:",
+			tourTitle: "Paket Wisata:",
 			guestName: "Nama Pemesan:",
 			guestEmail: "Email Pemesan:",
 			tourDate: "Tanggal Wisata:",
@@ -255,7 +255,7 @@ var translations = {
 			contactTitle: "Hubungi Kami",
 			address: "Jl. Hang Tuah No. 45, Pelabuhan Sanur, Denpasar Selatan, Bali 80227",
 			phone: "+62 812-3456-7890",
-			email: "info@wisatabahari.com",
+			email: "info@tripnusapenidaexplore.my.id",
 			paymentPartners: "Didukung oleh DANA Gapura SaaS Payment Gateway",
 			copyright: "Hak Cipta Dilindungi Undang-Undang."
 		},
@@ -518,7 +518,7 @@ var translations = {
 			contactTitle: "Contact Us",
 			address: "Jl. Hang Tuah No. 45, Sanur Harbour, Denpasar, Bali 80227",
 			phone: "+62 812-3456-7890",
-			email: "info@wisatabahari.com",
+			email: "info@tripnusapenidaexplore.my.id",
 			paymentPartners: "Powered by DANA Gapura SaaS Payment Gateway",
 			copyright: "All Rights Reserved."
 		},
@@ -553,4 +553,4 @@ function useLanguage() {
 }
 
 export { useLanguage as u };
-//# sourceMappingURL=useLanguage-CfLKp10j.mjs.map
+//# sourceMappingURL=useLanguage-CoSwGzMA.mjs.map

@@ -962,12 +962,12 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "order-success",
 		path: "/order-success",
-		component: () => import('../build/order-success-Ddd2_cBH.mjs')
+		component: () => import('../build/order-success-D6mHOb65.mjs')
 	},
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-FQJpCT8m.mjs')
+		component: () => import('../build/pages-BgDnb-cP.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -2294,21 +2294,21 @@ function useWisataApi() {
 	};
 	const getCompanyProfile = async () => {
 		const defaultProfile = {
-			companyName: "Trip Nusa Penida Explore",
-			brandName: "Trip Nusa Penida Explore",
-			legalName: "",
-			tagline: "Explore Nusa Penida & Marine Tour",
-			description: "",
-			logoUrl: "",
+			companyName: "Trip Nusapenida Explore",
+			brandName: "Trip Nusapenida Explore",
+			legalName: "Trip Nusapenida Explore",
+			tagline: "Eksplorasi Keindahan Laut & Pulau Eksotis Nusapenida",
+			description: "Penyedia layanan reservasi paket wisata Nusa Penida terpercaya.",
+			logoUrl: "/favicon.png",
 			logoDarkUrl: "",
-			faviconUrl: "",
-			email: "",
-			phone: "",
-			whatsapp: "",
-			address: "",
-			city: "",
-			province: "",
-			postalCode: "",
+			faviconUrl: "/favicon.png",
+			email: "info@tripnusapenidaexplore.my.id",
+			phone: "+62 823-4207-8184",
+			whatsapp: "+62 823-4207-8184",
+			address: "Jl. Klumpu, Nusa Penida",
+			city: "Klungkung",
+			province: "Bali",
+			postalCode: "80228",
 			bankName: "",
 			bankAccountNumber: "",
 			bankAccountName: "",
@@ -2316,7 +2316,7 @@ function useWisataApi() {
 			instagramUrl: "",
 			youtubeUrl: "",
 			tiktokUrl: "",
-			footerText: ""
+			footerText: "© 2026 tripnusapenidaexplore. Seluruh hak cipta dilindungi undang-undang."
 		};
 		try {
 			const res = await apiClient.get("/company/profile");
