@@ -440,7 +440,7 @@ var TestimonialsSection_vue_vue_type_script_setup_true_lang_default = /*@__PURE_
 					ssrRenderList$2(item.rating, (s) => {
 						_push(`<span>★</span>`);
 					});
-					_push(`<!--]--></div><p class="text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed"> &quot;${ssrInterpolate(item.comment)}&quot; </p></div><div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3"><img${ssrRenderAttr("src", unref(getImageUrl)(item.avatarUrl || "/images/avatar-budi.jpg"))}${ssrRenderAttr("alt", item.name)} class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700"><div><h5 class="text-xs font-bold text-slate-900 dark:text-white">${ssrInterpolate(item.name)}</h5><p class="text-[11px] text-teal-600 dark:text-teal-400 font-medium">${ssrInterpolate(item.tourTitle || unref(t)("testimonials.verifiedTrip"))}</p>`);
+					_push(`<!--]--></div><p class="text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed"> &quot;${ssrInterpolate(item.comment)}&quot; </p></div><div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3"><img${ssrRenderAttr("src", unref(getImageUrl)(item.avatarUrl || "/logo-trip.png"))}${ssrRenderAttr("alt", item.name)} class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700"><div><h5 class="text-xs font-bold text-slate-900 dark:text-white">${ssrInterpolate(item.name)}</h5><p class="text-[11px] text-teal-600 dark:text-teal-400 font-medium">${ssrInterpolate(item.tourTitle || unref(t)("testimonials.verifiedTrip"))}</p>`);
 					if (item.tripDate) _push(`<p class="text-[10px] text-slate-400">${ssrInterpolate(item.tripDate)}</p>`);
 					else _push(`<!---->`);
 					_push(`</div></div></div>`);
@@ -1072,4 +1072,4 @@ index_vue_vue_type_script_setup_true_lang_default.setup = (props, ctx) => {
 var pages_default = index_vue_vue_type_script_setup_true_lang_default;
 
 export { pages_default as default };
-//# sourceMappingURL=pages-CDx3nYsH.mjs.map
+//# sourceMappingURL=pages-uWyvDMss.mjs.map

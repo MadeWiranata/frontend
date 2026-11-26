@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-CDx3nYsH.mjs')
+		component: () => import('../build/pages-uWyvDMss.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -2229,7 +2229,7 @@ function useWisataApi() {
 			if (items.length > 0) return items.map((item) => ({
 				id: item.id,
 				name: item.authorName || item.name || "Wisatawan",
-				avatarUrl: item.authorAvatar || item.avatarUrl || "/images/avatar-budi.jpg",
+				avatarUrl: item.authorAvatar || item.avatarUrl || "/logo-trip.png",
 				rating: Number(item.rating) || 5,
 				comment: item.content || item.comment || "",
 				tourTitle: item.tourPackage?.title || item.tourTitle || "Wisatawan Terverifikasi",
@@ -2241,23 +2241,7 @@ function useWisataApi() {
 			}));
 			return [];
 		} catch (err) {
-			return [{
-				id: "testi-1",
-				name: "Sarah Wijaya",
-				avatarUrl: "/images/avatar-sarah.jpg",
-				rating: 5,
-				comment: "Pengalaman snorkeling Manta Bay terbaik! Pari mantanya terlihat jelas dan guidenya sangat ramah.",
-				tourTitle: "One Day Snorkeling Manta Bay & Nusa Penida Barat",
-				tripDate: "10 Oktober 2026"
-			}, {
-				id: "testi-2",
-				name: "Budi Santoso",
-				avatarUrl: "/images/avatar-budi.jpg",
-				rating: 5,
-				comment: "Fast boat tepat waktu, kabin dingin ber-AC dan pembayaran via DANA langsung terverifikasi seketika.",
-				tourTitle: "Tiket Fast Boat Sanur ke Nusa Penida PP",
-				tripDate: "18 Oktober 2026"
-			}];
+			return [];
 		}
 	};
 	const submitTestimonial = async (data) => {
