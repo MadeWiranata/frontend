@@ -957,7 +957,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "admin",
 		path: "/admin",
-		component: () => import('../build/admin-CiogrnCS.mjs')
+		component: () => import('../build/admin-BT1dYGmZ.mjs')
 	},
 	{
 		name: "order-success",
@@ -967,7 +967,7 @@ var virtual_nuxt_node_modules_2F_cache_2Fnuxt_2F_nuxt_2Froutes_default = [
 	{
 		name: "index",
 		path: "/",
-		component: () => import('../build/pages-Bz-QQMSy.mjs')
+		component: () => import('../build/pages-FQJpCT8m.mjs')
 	}
 ];
 // node_modules/nuxt/dist/pages/runtime/plugins/router.js
@@ -1780,112 +1780,8 @@ var broadcastSyncEvent = (action, payload) => {};
 var onSyncEvent = (callback) => {
 	return () => {};
 };
-var DEFAULT_MASTER_CATEGORIES = [
-	{
-		id: "cat-snorkeling",
-		name: "Snorkeling",
-		slug: "snorkeling",
-		description: "Berenang dan eksplorasi terumbu karang tropis bersama biota laut eksotis",
-		icon: "🤿",
-		imageUrl: "/images/category-snorkeling.jpg"
-	},
-	{
-		id: "cat-island-tour",
-		name: "Island Tour",
-		slug: "island-tour",
-		description: "Wisata darat berkeliling tebing pantai, bukit ikonik, dan spot foto terbaik",
-		icon: "🏝️",
-		imageUrl: "/images/category-island-tour.jpg"
-	},
-	{
-		id: "cat-fast-boat",
-		name: "Tiket Fast Boat",
-		slug: "tiket-fast-boat",
-		description: "Penyeberangan cepat pelabuhan Sanur ke Nusa Penida, Lembongan, dan Gili",
-		icon: "🚤",
-		imageUrl: "/images/category-fast-boat.jpg"
-	},
-	{
-		id: "cat-diving",
-		name: "Scuba Diving",
-		slug: "scuba-diving",
-		description: "Penyelaman bersertifikasi PADI dengan instruktur berpengalaman di kedalaman laut",
-		icon: "🐠",
-		imageUrl: "/images/category-snorkeling.jpg"
-	},
-	{
-		id: "cat-sunset-cruise",
-		name: "Sunset Cruise",
-		slug: "sunset-cruise",
-		description: "Pelayaran mewah menikmati panorama senja di atas kapal catamaran",
-		icon: "🌅",
-		imageUrl: "/images/category-fast-boat.jpg"
-	},
-	{
-		id: "cat-private-trip",
-		name: "Private Charter",
-		slug: "private-charter",
-		description: "Sewa kapal privat eksklusif untuk keluarga dan rombongan",
-		icon: "⛵",
-		imageUrl: "/images/category-island-tour.jpg"
-	}
-];
-var DEFAULT_MASTER_DESTINATIONS = [
-	{
-		id: "dest-nusa-penida",
-		name: "Nusa Penida",
-		slug: "nusa-penida",
-		province: "Bali",
-		city: "Klungkung",
-		description: "Surga bahari dengan tebing Kelingking, Manta Point, dan Diamond Beach",
-		imageUrl: "/images/hero-banner-bali.jpg"
-	},
-	{
-		id: "dest-sanur",
-		name: "Sanur Harbour",
-		slug: "sanur",
-		province: "Bali",
-		city: "Denpasar",
-		description: "Pusat dermaga penyeberangan kapal cepat utama di Bali Selatan",
-		imageUrl: "/images/tour-fast-boat.jpg"
-	},
-	{
-		id: "dest-nusa-lembongan",
-		name: "Nusa Lembongan",
-		slug: "nusa-lembongan",
-		province: "Bali",
-		city: "Klungkung",
-		description: "Pulau tenang dengan hutan mangrove eksotis dan spot selancar mendunia",
-		imageUrl: "/images/tour-manta-bay.jpg"
-	},
-	{
-		id: "dest-gili",
-		name: "Gili Trawangan",
-		slug: "gili-trawangan",
-		province: "NTB",
-		city: "Lombok Utara",
-		description: "Kepulauan tropis bebas polusi kendaraan bermotor dengan terumbu karang kura-kura",
-		imageUrl: "/images/category-island-tour.jpg"
-	},
-	{
-		id: "dest-labuan-bajo",
-		name: "Labuan Bajo",
-		slug: "labuan-bajo",
-		province: "NTT",
-		city: "Manggarai Barat",
-		description: "Gerbang utama menuju habitat purba Komodo dan Pink Beach",
-		imageUrl: "/images/tour-raja-ampat.jpg"
-	},
-	{
-		id: "dest-raja-ampat",
-		name: "Raja Ampat",
-		slug: "raja-ampat",
-		province: "Papua Barat Daya",
-		city: "Waisai",
-		description: "Ibukota keanekaragaman hayati bawah laut nomor satu di dunia",
-		imageUrl: "/images/tour-raja-ampat.jpg"
-	}
-];
+var DEFAULT_MASTER_CATEGORIES = [];
+var DEFAULT_MASTER_DESTINATIONS = [];
 var DEFAULT_MASTER_TOURS = [
 	{
 		id: "tour-manta-bay",
@@ -2052,30 +1948,6 @@ var DEFAULT_MASTER_TOURS = [
 		status: "PUBLISHED"
 	}
 ];
-var DEFAULT_MASTER_PROMOS = [{
-	id: "promo-1",
-	code: "WISATAHEMAT20",
-	title: "Promo Spesial Liburan Bahari 20% OFF",
-	description: "Gunakan kupon diskon untuk potongan harga reservasi seluruh paket tour snorkeling dan diving.",
-	discountType: "PERCENT",
-	discountValue: 20,
-	maxDiscountAmount: 2e5,
-	minSpend: 4e5,
-	startDate: "2026-01-01",
-	endDate: "2027-12-31",
-	isActive: true
-}, {
-	id: "promo-2",
-	code: "MANTABAY50K",
-	title: "Cashback Rp 50.000 Trip Nusa Penida",
-	description: "Potongan langsung Rp 50.000 untuk paket Manta Bay & fast boat Sanur.",
-	discountType: "FIXED",
-	discountValue: 5e4,
-	minSpend: 25e4,
-	startDate: "2026-01-01",
-	endDate: "2027-12-31",
-	isActive: true
-}];
 function useWisataApi() {
 	const config = useRuntimeConfig();
 	const apiBase = config.public.apiBaseUrl || config.public.apiBase || "http://localhost:5678/api/v1";
@@ -2136,9 +2008,6 @@ function useWisataApi() {
 		if (err.code === "ERR_NETWORK" || err.code === "ECONNREFUSED") return `Tidak dapat terhubung ke Backend API (${apiBase}). Pastikan server NestJS aktif.`;
 		return err.message || "Terjadi kesalahan pada server API.";
 	};
-	const applyPriceOverrides = (tours) => {
-		return tours;
-	};
 	const getTours = async (query = {}) => {
 		try {
 			const params = { _t: Date.now() };
@@ -2152,12 +2021,11 @@ function useWisataApi() {
 			let list = [];
 			if (Array.isArray(data)) list = data;
 			else if (data?.items && Array.isArray(data.items)) list = data.items;
-			if (list.length === 0) list = [...DEFAULT_MASTER_TOURS];
-			return applyPriceOverrides(list);
+			return list;
 		} catch (err) {
 			isOnline.value = false;
 			apiError.value = parseErrorMessage(err);
-			return applyPriceOverrides([...DEFAULT_MASTER_TOURS]);
+			return [];
 		}
 	};
 	const getBestSellers = async () => {
@@ -2165,11 +2033,9 @@ function useWisataApi() {
 			const res = await apiClient.get("/tours/best-sellers", { params: { _t: Date.now() } });
 			isOnline.value = true;
 			const data = res.data?.data !== void 0 ? res.data.data : res.data;
-			let list = Array.isArray(data) ? data : [];
-			if (list.length === 0) list = DEFAULT_MASTER_TOURS.filter((t) => t.isBestSeller);
-			return applyPriceOverrides(list);
+			return Array.isArray(data) ? data : [];
 		} catch (err) {
-			return applyPriceOverrides(DEFAULT_MASTER_TOURS.filter((t) => t.isBestSeller));
+			return [];
 		}
 	};
 	const getCategories = async () => {
@@ -2225,24 +2091,19 @@ function useWisataApi() {
 		try {
 			const res = await apiClient.get(`/tours/slug/${slug}`);
 			isOnline.value = true;
-			const data = res.data?.data !== void 0 ? res.data.data : res.data;
-			if (data) return applyPriceOverrides([data])[0];
+			return (res.data?.data !== void 0 ? res.data.data : res.data) || null;
 		} catch (err) {
-			console.warn("[API GET /tours/slug Note]: using master fallback");
+			return null;
 		}
-		const matched = DEFAULT_MASTER_TOURS.find((t) => t.slug === slug || t.id === slug);
-		return matched ? applyPriceOverrides([matched])[0] : null;
 	};
 	const getPromos = async () => {
 		try {
 			const res = await apiClient.get("/promos/active");
 			isOnline.value = true;
 			const data = res.data?.data !== void 0 ? res.data.data : res.data;
-			let list = Array.isArray(data) ? data : [];
-			if (list.length === 0) list = [...DEFAULT_MASTER_PROMOS];
-			return list;
+			return Array.isArray(data) ? data : [];
 		} catch (err) {
-			return [...DEFAULT_MASTER_PROMOS];
+			return [];
 		}
 	};
 	const validatePromo = async (code, subtotal, tourPackageId) => {
@@ -2772,12 +2633,12 @@ function useWisataApi() {
 		try {
 			const res = await apiClient.get("/promos", { headers: adminToken.value ? { Authorization: `Bearer ${adminToken.value}` } : {} });
 			const data = res.data?.data !== void 0 ? res.data.data : res.data;
-			let list = [];
-			if (Array.isArray(data)) list = data;
-			else if (data?.items && Array.isArray(data.items)) list = data.items;
-			if (list.length > 0) return list;
-		} catch (_) {}
-		return [...DEFAULT_MASTER_PROMOS];
+			if (Array.isArray(data)) return data;
+			if (data?.items && Array.isArray(data.items)) return data.items;
+			return [];
+		} catch (_) {
+			return [];
+		}
 	};
 	const createPromoAdmin = async (promo) => {
 		try {
