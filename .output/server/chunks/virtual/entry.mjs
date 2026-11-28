@@ -3159,14 +3159,127 @@ var app_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 		});
 		const pageTitle = computed(() => {
 			if (company.value?.browserTitle?.trim()) return company.value.browserTitle.trim();
-			return `${company.value?.brandName || company.value?.companyName || "Trip Nusa Penida Explore"} - ${company.value?.tagline || "Platform Booking Wisata & Fast Boat"}`;
+			return `${company.value?.brandName || company.value?.companyName || "Trip Nusa Penida Explore"} - ${company.value?.tagline || "Paket Wisata Nusa Penida & Fast Boat Sanur"}`;
 		});
+		const seoDescription = computed(() => {
+			const desc = company.value?.description?.trim();
+			if (desc) return desc;
+			return "Trip Nusa Penida Explore (Trip Nusapenida) — Layanan private tour Nusa Penida Barat & Timur, paket wisata 1 hari & 2H1M, snorkeling Manta Bay, dan tiket fast boat Sanur Nusa Penida PP terpercaya.";
+		});
+		const seoLogoUrl = computed(() => {
+			const href = faviconHref.value;
+			if (href.startsWith("http")) return href;
+			return `https://tripnusapenidaexplore.my.id${href.startsWith("/") ? "" : "/"}${href}`;
+		});
+		const jsonLdSchema = computed(() => JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "TravelAgency",
+			name: company.value?.brandName || company.value?.companyName || "Trip Nusa Penida Explore",
+			alternateName: [
+				"Trip Nusapenida",
+				"Trip Nusa Penida",
+				"TripNusaPenidaExplore",
+				"Nusa Penida Explore"
+			],
+			url: "https://tripnusapenidaexplore.my.id/",
+			logo: seoLogoUrl.value,
+			image: seoLogoUrl.value,
+			description: seoDescription.value,
+			telephone: company.value?.whatsapp || company.value?.phone || "+62 823-4207-8184",
+			email: company.value?.email || "info@tripnusapenidaexplore.my.id",
+			address: {
+				"@type": "PostalAddress",
+				streetAddress: company.value?.address || "Jl. Klumpu, Nusa Penida",
+				addressLocality: company.value?.city || "Klungkung",
+				addressRegion: company.value?.province || "Bali",
+				postalCode: company.value?.postalCode || "80771",
+				addressCountry: "ID"
+			},
+			areaServed: {
+				"@type": "Place",
+				name: "Nusa Penida, Bali, Indonesia"
+			}
+		}));
 		useHead(() => ({
+			htmlAttrs: { lang: "id" },
 			title: pageTitle.value,
+			meta: [
+				{
+					name: "description",
+					content: seoDescription.value,
+					key: "desc"
+				},
+				{
+					name: "keywords",
+					content: "tripnusapenida, trip nusa penida, trip nusapenida explore, nusapenida, nusa penida tour, paket wisata nusa penida, private tour nusa penida, fast boat sanur nusa penida, kelingking beach, diamond beach",
+					key: "keywords"
+				},
+				{
+					name: "robots",
+					content: "index, follow",
+					key: "robots"
+				},
+				{
+					property: "og:type",
+					content: "website",
+					key: "og:type"
+				},
+				{
+					property: "og:site_name",
+					content: company.value?.brandName || "Trip Nusa Penida Explore",
+					key: "og:site_name"
+				},
+				{
+					property: "og:title",
+					content: pageTitle.value,
+					key: "og:title"
+				},
+				{
+					property: "og:description",
+					content: seoDescription.value,
+					key: "og:description"
+				},
+				{
+					property: "og:url",
+					content: "https://tripnusapenidaexplore.my.id/",
+					key: "og:url"
+				},
+				{
+					property: "og:image",
+					content: seoLogoUrl.value,
+					key: "og:image"
+				},
+				{
+					name: "twitter:card",
+					content: "summary_large_image",
+					key: "twitter:card"
+				},
+				{
+					name: "twitter:title",
+					content: pageTitle.value,
+					key: "twitter:title"
+				},
+				{
+					name: "twitter:description",
+					content: seoDescription.value,
+					key: "twitter:description"
+				},
+				{
+					name: "twitter:image",
+					content: seoLogoUrl.value,
+					key: "twitter:image"
+				}
+			],
 			link: [
+				{
+					rel: "canonical",
+					href: "https://tripnusapenidaexplore.my.id/",
+					key: "canonical"
+				},
 				{
 					rel: "icon",
 					type: faviconType.value,
+					sizes: "192x192",
 					href: faviconHref.value,
 					key: "app-favicon"
 				},
@@ -3180,7 +3293,12 @@ var app_vue_vue_type_script_setup_true_lang_default = /*@__PURE__*/ defineCompon
 					href: faviconHref.value,
 					key: "app-apple-icon"
 				}
-			]
+			],
+			script: [{
+				type: "application/ld+json",
+				innerHTML: jsonLdSchema.value,
+				key: "ld-json-org"
+			}]
 		}));
 		return (_ctx, _push, _parent, _attrs) => {
 			_push(ssrRenderComponent(page_default, _attrs, null, _parent));
